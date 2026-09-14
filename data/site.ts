@@ -32,7 +32,7 @@ export const site = {
   ],
 
   // TODO: replace with the real registration form link
-  registerUrl: "#",
+  registerUrl: "https://forms.gle/NGwSaveazdeNHHXLA",
   // TODO: point this at the actual brochure PDF once finalized in /public/docs
   brochureUrl: "/docs/trs-dsai-brochure.pdf",
 
