@@ -37,8 +37,8 @@ export const site = {
   brochureUrl: "/docs/trs-dsai-brochure.pdf",
 
   contact: {
-    email: "trs@thapar.edu",
-    secondaryEmail: "dsai@thapar.edu",
+    email: "trs_tiet@thapar.edu",
+    secondaryEmail: "trs_tiet@thapar.edu",
   },
 
   socials: [
