@@ -17,9 +17,9 @@ export const organizers: Organizer[] = [
     photo: "/images/speakers/ekta-singla.jpg",
   },
   {
-    name: "Mr. Sangeet Kumar",
-    role: "Co-Founder, Addverb",
-    photo: "/images/speakers/sangeet-kumar.jpg",
+    name: "Dr. Ashish Singla",
+    role: "Professor, TIET",
+  //  photo: "/images/speakers/sangeet-kumar.jpg",
   },
   // TODO: add the rest of the organizing committee (faculty coordinators,
   // student organizers, TRS core team) as names are confirmed.
