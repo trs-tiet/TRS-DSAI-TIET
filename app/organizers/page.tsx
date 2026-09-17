@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import OrganizerCard from "@/components/OrganizerCard";
 import CTASection from "@/components/CTASection";
 import { organizers } from "@/data/organizers";
 import { site } from "@/data/site";
@@ -28,28 +28,13 @@ export default function OrganizersPage() {
       <section className="bg-surface py-20">
         <div className="wrap">
           <Reveal>
-            <h2 className="font-display font-semibold text-[22px] mb-8">Organizing committee</h2>
+            <h2 className="font-display font-semibold text-[22px] mb-2">Organizing committee</h2>
+            <p className="text-steel text-[14px] mb-8">Click a card for a fuller bio.</p>
           </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {organizers.map((o, i) => (
               <Reveal key={o.name} delay={i * 0.06} className="h-full">
-                <div className="bg-surface border border-line flex flex-col h-full">
-                  <div className="relative w-full aspect-square bg-paper">
-                    {o.photo && (
-                      <Image
-                        src={o.photo}
-                        alt={o.name}
-                        fill
-                        sizes="(min-width: 1024px) 20vw, (min-width: 640px) 33vw, 50vw"
-                        className="object-cover"
-                      />
-                    )}
-                  </div>
-                  <div className="p-5 flex flex-col min-h-[86px]">
-                    <div className="text-[15.5px] font-semibold font-display mb-1 line-clamp-1">{o.name}</div>
-                    <div className="text-[12.5px] text-steel line-clamp-2">{o.role}</div>
-                  </div>
-                </div>
+                <OrganizerCard organizer={o} />
               </Reveal>
             ))}
           </div>
