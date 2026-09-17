@@ -13,6 +13,7 @@ export type SponsorTier = "Sponsor";
 export type Sponsor = {
   name: string;
   tier: SponsorTier;
+  focus: string;
   description: string;
   logo?: string;
   url?: string;
@@ -21,6 +22,7 @@ export type Sponsor = {
 export const sponsors: Sponsor[] = exhibitors.map((e) => ({
   name: e.name,
   tier: "Sponsor" as const,
+  focus: e.focus,
   description: e.description,
   logo: e.logo,
 }));
