@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import VideoBackground from "@/components/VideoBackground";
+import VideoDisclaimer from "@/components/VideoDisclaimer";
 import Reveal from "@/components/Reveal";
 import OrganizerCard from "@/components/OrganizerCard";
 import CTASection from "@/components/CTASection";
@@ -12,13 +14,16 @@ export const metadata: Metadata = {
 export default function OrganizersPage() {
   return (
     <>
-      <section className="bg-ink text-white py-20">
-        <div className="wrap">
-          <p className="text-[14px] text-white/60 mb-3">Behind the workshop</p>
+      <section className="relative h-[42vh] min-h-[320px] overflow-hidden text-white flex items-end">
+        <VideoBackground src="/videos/organizers.mp4" />
+        <VideoDisclaimer />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/55 to-ink/35" />
+        <div className="relative z-10 wrap pb-12">
+          <p className="text-[14px] text-white/70 mb-3">Behind the workshop</p>
           <h1 className="font-display font-bold text-[36px] md:text-[52px] max-w-2xl mb-4">
             Organizers
           </h1>
-          <p className="text-white/70 max-w-lg text-[15.5px]">
+          <p className="text-white/85 max-w-lg text-[15.5px]">
             The {site.organizer}, with {site.partners.join(" and ")}, organize and run this
             workshop end to end.
           </p>
