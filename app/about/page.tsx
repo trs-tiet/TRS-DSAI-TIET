@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import VideoBackground from "@/components/VideoBackground";
+import VideoDisclaimer from "@/components/VideoDisclaimer";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -14,6 +15,7 @@ export default function AboutPage() {
     <>
       <section className="relative h-[46vh] min-h-[360px] overflow-hidden text-white flex items-end">
         <VideoBackground src="/videos/about.mp4" />
+        <VideoDisclaimer />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-ink/60" />
         <div className="relative z-10 wrap pb-14">
           <p className="text-[14px] text-white/70 mb-3">About the workshop</p>
