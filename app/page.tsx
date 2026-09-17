@@ -103,7 +103,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="relative aspect-[4/5] border border-line p-3.5 bg-paper">
-              <VideoBackground src="/videos/about.mp4" className="static" />
+              <VideoBackground src="/videos/home-teaser.mp4" className="static" />
               <VideoDisclaimer position="top-left" />
               <div className="absolute -bottom-px left-3.5 bg-ink text-white text-xs px-3 py-1.5 font-medium">
                 Precision manipulation
