@@ -16,7 +16,7 @@ export default function OrganizersPage() {
       <section className="relative h-[42vh] min-h-[320px] overflow-hidden text-white flex items-end">
         <VideoBackground src="/videos/organizers.mp4" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/55 to-ink/35" />
-        <div className="relative z-10 wrap pb-12">
+        <div className="relative z-10 w-full px-6 md:px-10 pb-12">
           <p className="text-[14px] text-white/70 mb-3">Behind the workshop</p>
           <h1 className="font-display font-bold text-[36px] md:text-[52px] max-w-2xl mb-4">
             Organizers
