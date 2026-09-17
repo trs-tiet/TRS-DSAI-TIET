@@ -28,13 +28,34 @@ const moreChildren = [
 
 function HoverDropdown({ label, items }: { label: string; items: { href: string; label: string }[] }) {
   const [open, setOpen] = useState(false);
+
   return (
     <div
       className="relative"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
+      onFocus={() => setOpen(true)}
+      onBlur={(e) => {
+        // Only close once focus has actually left this whole dropdown
+        // (not just moved from the button to a link inside it)
+        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+          setOpen(false);
+        }
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") {
+          setOpen(false);
+          (e.currentTarget.querySelector("button") as HTMLButtonElement)?.focus();
+        }
+      }}
     >
-      <button className="relative group py-1 flex items-center gap-1 whitespace-nowrap" aria-expanded={open}>
+      <button
+        type="button"
+        className="relative group py-1 flex items-center gap-1 whitespace-nowrap"
+        aria-haspopup="true"
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
+      >
         {label}
         <svg width="9" height="6" viewBox="0 0 10 6" fill="none" className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}>
           <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
@@ -43,9 +64,15 @@ function HoverDropdown({ label, items }: { label: string; items: { href: string;
       </button>
       {open && (
         <div className="absolute top-full right-0 pt-3 w-56 z-10">
-          <div className="bg-surface border border-line shadow-lg py-2">
+          <div className="bg-surface border border-line shadow-lg py-2" role="menu">
             {items.map((c) => (
-              <Link key={c.href} href={c.href} className="block px-4 py-2.5 text-[13.5px] hover:bg-paper transition-colors whitespace-nowrap">
+              <Link
+                key={c.href}
+                href={c.href}
+                role="menuitem"
+                className="block px-4 py-2.5 text-[13.5px] hover:bg-paper transition-colors whitespace-nowrap"
+                onClick={() => setOpen(false)}
+              >
                 {c.label}
               </Link>
             ))}
