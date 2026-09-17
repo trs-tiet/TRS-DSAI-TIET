@@ -4,7 +4,7 @@
 // site search modal. Add a page here when you add a new route.
 // ---------------------------------------------------------------------------
 
-import { academicSpeakers, industrialSpeakers } from "./speakers";
+import { speakers } from "./speakers";
 import { exhibitors } from "./exhibitors";
 import { faqs } from "./faq";
 import { organizers } from "./organizers";
@@ -22,8 +22,7 @@ const pages: SearchItem[] = [
   { title: "Home", category: "Page", href: "/" },
   { title: "About", category: "Page", href: "/about" },
   { title: "Organizers", category: "Page", href: "/organizers" },
-  { title: "Academic Speakers", category: "Page", href: "/speakers/academia" },
-  { title: "Industrial Speakers", category: "Page", href: "/speakers/industrial" },
+  { title: "Speakers", category: "Page", href: "/speakers" },
   { title: "Schedule", category: "Page", href: "/schedule" },
   { title: "Sponsors", category: "Page", href: "/sponsors" },
   { title: "Hands-on Experience", category: "Page", href: "/hands-on-experience" },
@@ -35,20 +34,12 @@ const pages: SearchItem[] = [
   { title: "Contact", category: "Page", href: "/contact" },
 ];
 
-const speakerItems: SearchItem[] = [
-  ...academicSpeakers.map((s) => ({
-    title: s.name,
-    category: "Academic Speaker",
-    href: "/speakers/academia",
-    description: s.affiliation,
-  })),
-  ...industrialSpeakers.map((s) => ({
-    title: s.name,
-    category: "Industrial Speaker",
-    href: "/speakers/industrial",
-    description: s.affiliation,
-  })),
-];
+const speakerItems: SearchItem[] = speakers.map((s) => ({
+  title: s.name,
+  category: s.type === "Academic" ? "Academic Speaker" : "Industrial Speaker",
+  href: "/speakers",
+  description: s.affiliation,
+}));
 
 const exhibitorItems: SearchItem[] = exhibitors.map((e) => ({
   title: e.name,
