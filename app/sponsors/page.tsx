@@ -33,20 +33,20 @@ export default function SponsorsPage() {
               </div>
             </Reveal>
           ) : (
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
               {sponsors.map((s, i) => (
                 <Reveal key={s.name} delay={i * 0.05} className="h-full">
-                  <div className="bg-surface border border-line h-full flex flex-col p-8">
-                    <div className="h-14 flex items-center mb-6">
+                  <div className="bg-surface border border-line h-full flex flex-col items-center text-center p-8">
+                    <div className="h-14 flex items-center mb-5">
                       {s.logo ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={s.logo} alt={`${s.name} logo`} className="h-12 w-auto max-w-[220px] object-contain" />
+                        <img src={s.logo} alt={`${s.name} logo`} className="h-12 w-auto max-w-[180px] object-contain" />
                       ) : (
                         <span className="font-display font-semibold text-[20px] text-steel">{s.name}</span>
                       )}
                     </div>
-                    <h3 className="font-display font-semibold text-[19px] mb-2">{s.name}</h3>
-                    <p className="text-[14.5px] text-steel leading-relaxed">{s.description}</p>
+                    <h3 className="font-display font-semibold text-[17px] mb-2">{s.name}</h3>
+                    <p className="text-[13.5px] text-steel">{s.focus}</p>
                   </div>
                 </Reveal>
               ))}
