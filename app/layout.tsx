@@ -20,6 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tiet-trs.vercel.app"),
   title: `${site.eventName} — ${site.eventTitle}`,
   description:
     "A 2-day international workshop on robotics and AI hosted by The Robotics Society at TIET, Patiala — bringing together researchers, industry experts, and students.",
@@ -28,6 +29,21 @@ export const metadata: Metadata = {
     description:
       "Robotics and AI in Healthcare, Defence, and Rescue — 30-31 October 2026, TIET Patiala.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: `${site.eventName} — ${site.eventTitle}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.eventName} — ${site.eventTitle}`,
+    description:
+      "Robotics and AI in Healthcare, Defence, and Rescue — 30-31 October 2026, TIET Patiala.",
+    images: ["/og-image.jpg"],
   },
 };
 
