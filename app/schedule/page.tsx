@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import VideoBackground from "@/components/VideoBackground";
+import VideoDisclaimer from "@/components/VideoDisclaimer";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import { scheduleDays } from "@/data/schedule";
@@ -15,6 +16,7 @@ export default function SchedulePage() {
     <>
       <section className="relative h-[42vh] min-h-[320px] overflow-hidden text-white flex items-end">
         <VideoBackground src="/videos/schedule.mp4" />
+        <VideoDisclaimer />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/45 to-ink/60" />
         <div className="relative z-10 wrap pb-12">
           <p className="text-[14px] text-white/70 mb-3">Programme</p>
