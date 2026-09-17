@@ -27,7 +27,7 @@ export const site = {
 
   stats: [
     { value: "100+", label: "Participants" },
-    { value: "12", label: "Invited speakers" },
+    { value: "15", label: "Invited speakers" },
     { value: "6", label: "Industry exhibitions" },
   ],
 
