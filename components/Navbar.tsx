@@ -11,15 +11,11 @@ const flatLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/organizers", label: "Organizers" },
+  { href: "/speakers", label: "Speakers" },
   { href: "/schedule", label: "Schedule" },
   { href: "/sponsors", label: "Sponsors" },
   { href: "/hands-on-experience", label: "Hands-on Experience" },
   { href: "/accommodation", label: "Accommodation & Travel" },
-];
-
-const speakersChildren = [
-  { href: "/speakers/academia", label: "Academia" },
-  { href: "/speakers/industrial", label: "Industrial" },
 ];
 
 const moreChildren = [
@@ -89,7 +85,6 @@ export default function Navbar() {
               <span className="absolute left-0 -bottom-0.5 h-[1.5px] w-0 bg-crimson transition-all duration-200 group-hover:w-full" />
             </Link>
           ))}
-          <HoverDropdown label="Speakers" items={speakersChildren} />
           <HoverDropdown label="More" items={moreChildren} />
         </nav>
 
@@ -131,14 +126,6 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <div className="text-[15px] font-medium py-1">Speakers</div>
-          <div className="pl-4 flex flex-col gap-3 -mt-2">
-            {speakersChildren.map((c) => (
-              <Link key={c.href} href={c.href} onClick={() => setOpen(false)} className="text-[14px] text-steel">
-                {c.label}
-              </Link>
-            ))}
-          </div>
           <div className="text-[15px] font-medium py-1">More</div>
           <div className="pl-4 flex flex-col gap-3 -mt-2">
             {moreChildren.map((c) => (
