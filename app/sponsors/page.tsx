@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import VideoBackground from "@/components/VideoBackground";
+import VideoDisclaimer from "@/components/VideoDisclaimer";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import { sponsors } from "@/data/sponsors";
@@ -11,13 +13,16 @@ export const metadata: Metadata = {
 export default function SponsorsPage() {
   return (
     <>
-      <section className="bg-navy-deep text-white py-20">
-        <div className="wrap">
-          <p className="text-[14px] text-white/60 mb-3">Supporting the workshop</p>
-          <h1 className="font-display font-bold text-[36px] md:text-[52px] max-w-2xl mb-4">
+      <section className="relative h-[42vh] min-h-[320px] overflow-hidden text-white flex items-end">
+        <VideoBackground src="/videos/sponsors.mp4" />
+        <VideoDisclaimer />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/45 to-ink/60" />
+        <div className="relative z-10 wrap pb-12">
+          <p className="text-[14px] text-white/70 mb-3">Supporting the workshop</p>
+          <h1 className="font-display font-bold text-[36px] md:text-[52px] max-w-2xl">
             Sponsors
           </h1>
-          <p className="text-white/70 max-w-lg text-[15.5px]">
+          <p className="text-white/80 max-w-lg text-[15.5px] mt-4">
             Organizations backing {site.eventName}. Interested in sponsoring? Reach out via the
             contact page.
           </p>
