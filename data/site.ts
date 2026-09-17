@@ -7,7 +7,7 @@
 export const site = {
   eventName: "TRS-DSAI 2026",
   eventTitle: "Intelligent Systems: The Future of Robotics and AI",
-  tagline: "2 Day International Workshop",
+  tagline: "2 Day International Workshop | TRS-DSAI",
   organizer: "The Robotics Society (TRS)",
   partners: ["COE | DSAI, TIET"],
 
