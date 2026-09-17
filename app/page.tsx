@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import VideoBackground from "@/components/VideoBackground";
+import VideoDisclaimer from "@/components/VideoDisclaimer";
 import Countdown from "@/components/Countdown";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -15,52 +16,53 @@ export default function HomePage() {
 
   return (
     <>
-      {/* HERO BANNER — fixed 2.35:1 photo, main admin building */}
-      <section className="relative w-full aspect-[2.35/1] overflow-hidden">
+      {/* HERO — blurred building photo, dark scrim, bold overlay text */}
+      <section className="relative w-full aspect-[2.35/1] min-h-[560px] md:min-h-0 overflow-hidden text-white">
         <Image
           src="/images/hero/tiet-admin-building.jpg"
           alt="TIET main administrative building"
           fill
           priority
-          className="object-cover"
+          className="object-cover blur-[3px] scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-black/25" />
-        <div className="hidden md:block absolute z-10 top-6 right-6 text-right text-[15.5px] text-white bg-ink/60 backdrop-blur-sm px-4 py-3 rounded-sm">
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/80 to-ink/55" />
+
+        <div className="hidden md:block absolute z-10 top-6 right-6 text-right text-[15.5px] font-bold bg-ink/70 backdrop-blur-sm px-4 py-3 rounded-sm">
           <div className="mb-1.5">{site.dateLabel}</div>
           <div>
-            <strong className="font-semibold">{site.venue.rooms}</strong>, {site.venue.name}
+            <strong className="font-bold">{site.venue.rooms}</strong>, {site.venue.name}
           </div>
         </div>
-      </section>
 
-      {/* HERO CONTENT — heading, venue, countdown, CTAs */}
-      <section className="bg-ink text-white pt-14 pb-16">
-        <div className="wrap">
-          <p className="text-[16.5px] text-[#E7C7CD] font-medium mb-4">{site.tagline}</p>
+        <div className="relative z-10 h-full flex flex-col justify-center wrap py-10">
+          <p className="text-[16.5px] text-[#F0C8CE] font-bold mb-4">{site.tagline}</p>
           <h1 className="font-display font-bold leading-[1.05] text-[34px] sm:text-[46px] md:text-[58px] lg:text-[64px] max-w-4xl mb-5">
             {site.eventTitle}
           </h1>
-          <p className="text-[16.5px] text-white font-medium mb-2">{site.venue.name}</p>
-          <p className="text-[17px] text-white/80 max-w-lg mb-9">
+          <p className="text-[16.5px] text-white font-bold mb-2">{site.venue.name}</p>
+          <p className="text-[17px] text-white font-bold max-w-lg mb-9">
             Researchers, industry experts, start-ups, and students from India and abroad,
             exploring the latest advances in robotics, autonomous systems, and intelligent
             technologies.
           </p>
 
-          <div className="mb-9">
+          <div className="mb-2.5">
             <Countdown />
           </div>
+          <p className="text-[12.5px] text-white/70 font-medium mb-9">
+            Countdown shown in IST (India Standard Time)
+          </p>
 
           <div className="flex gap-4 flex-wrap">
             <a
               href={site.registerUrl}
-              className="bg-crimson text-white px-7 py-[15px] font-semibold text-[14.5px] rounded-sm hover:bg-crimson-deep transition-colors"
+              className="bg-crimson text-white px-7 py-[15px] font-bold text-[14.5px] rounded-sm hover:bg-crimson-deep transition-colors"
             >
               Register now
             </a>
             <a
               href={site.brochureUrl}
-              className="border border-white/55 text-white px-7 py-[14px] font-semibold text-[14.5px] rounded-sm hover:bg-white/10 transition-colors"
+              className="border-2 border-white text-white px-7 py-[14px] font-bold text-[14.5px] rounded-sm hover:bg-white/10 transition-colors"
             >
               Download brochure
             </a>
@@ -72,6 +74,7 @@ export default function HomePage() {
       <section className="bg-surface py-28">
         <div className="wrap grid md:grid-cols-2 gap-16 items-center">
           <Reveal>
+            <p className="text-[14px] text-steel font-semibold mb-3">About the Workshop</p>
             <h2 className="font-display font-semibold text-[34px] mb-5">
               Ideas, innovation, real-world impact
             </h2>
@@ -101,6 +104,7 @@ export default function HomePage() {
           <Reveal delay={0.1}>
             <div className="relative aspect-[4/5] border border-line p-3.5 bg-paper">
               <VideoBackground src="/videos/about.mp4" className="static" />
+              <VideoDisclaimer position="top-left" />
               <div className="absolute -bottom-px left-3.5 bg-ink text-white text-xs px-3 py-1.5 font-medium">
                 Precision manipulation
               </div>
