@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import VideoBackground from "@/components/VideoBackground";
-import VideoDisclaimer from "@/components/VideoDisclaimer";
 import Reveal from "@/components/Reveal";
 import OrganizerCard from "@/components/OrganizerCard";
 import CTASection from "@/components/CTASection";
@@ -16,7 +15,6 @@ export default function OrganizersPage() {
     <>
       <section className="relative h-[42vh] min-h-[320px] overflow-hidden text-white flex items-end">
         <VideoBackground src="/videos/organizers.mp4" />
-        <VideoDisclaimer />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/55 to-ink/35" />
         <div className="relative z-10 wrap pb-12">
           <p className="text-[14px] text-white/70 mb-3">Behind the workshop</p>
