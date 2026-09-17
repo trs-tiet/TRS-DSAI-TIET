@@ -23,16 +23,28 @@ export default function PlaceCard({ place }: { place: PlaceToVisit }) {
           )}
         </div>
         <p className="text-[14.5px] text-steel mb-3">{place.description}</p>
-        {place.link && (
-          <a
-            href={place.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[13px] font-semibold text-navy border-b border-navy pb-0.5"
-          >
-            Learn more
-          </a>
-        )}
+        <div className="flex gap-5 flex-wrap">
+          {place.link && (
+            <a
+              href={place.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[13px] font-semibold text-navy border-b border-navy pb-0.5"
+            >
+              Learn more
+            </a>
+          )}
+          {place.mapsUrl && (
+            <a
+              href={place.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[13px] font-semibold text-crimson border-b border-crimson pb-0.5"
+            >
+              View on map
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
