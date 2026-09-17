@@ -9,6 +9,7 @@ export type PlaceToVisit = {
   distance?: string;
   description: string;
   link?: string;
+  mapsUrl?: string;
   photo?: string;
 };
 
