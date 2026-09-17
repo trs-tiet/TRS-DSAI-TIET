@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import VideoBackground from "@/components/VideoBackground";
+import VideoDisclaimer from "@/components/VideoDisclaimer";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import { exhibitors } from "@/data/exhibitors";
@@ -14,6 +15,7 @@ export default function HandsOnExperiencePage() {
     <>
       <section className="relative h-[42vh] min-h-[320px] overflow-hidden text-white flex items-end">
         <VideoBackground src="/videos/hands-on-experience.mp4" />
+        <VideoDisclaimer />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/45 to-ink/60" />
         <div className="relative z-10 wrap pb-12">
           <p className="text-[14px] text-white/70 mb-3">On the floor</p>
@@ -35,7 +37,7 @@ export default function HandsOnExperiencePage() {
 
           <div className="grid md:grid-cols-2 gap-px bg-line">
             {exhibitors.map((ex, i) => (
-              <Reveal key={ex.name} delay={i * 0.05}>
+              <Reveal key={ex.name} delay={i * 0.05} className="h-full">
                 <div className="bg-surface p-9 h-full flex flex-col gap-4 border border-line">
                   <div className="h-10 flex items-center">
                     {ex.logo ? (
@@ -48,7 +50,7 @@ export default function HandsOnExperiencePage() {
                     )}
                   </div>
                   <h3 className="font-display font-semibold text-[19px]">{ex.name}</h3>
-                  <p className="text-[14.5px] text-steel">{ex.focus}</p>
+                  <p className="text-[14.5px] text-steel leading-relaxed">{ex.description}</p>
                 </div>
               </Reveal>
             ))}
