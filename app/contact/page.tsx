@@ -39,6 +39,25 @@ export default function ContactPage() {
             <div className="text-[13px] text-steel mb-1.5">Venue</div>
             <p className="text-[15px] max-w-xs whitespace-pre-line">{site.venue.fullAddress}</p>
           </div>
+
+          <div className="mt-10 pt-10 border-t border-line">
+            <div className="text-[13px] text-steel mb-3">Follow us on social media</div>
+            <div className="flex gap-4 flex-wrap">
+              {site.socials.map((social) => (
+                social.url !== "#" && (
+                  <a
+                    key={social.label}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[14px] font-medium text-crimson hover:text-crimson-deep transition-colors"
+                  >
+                    {social.label}
+                  </a>
+                )
+              ))}
+            </div>
+          </div>
         </Reveal>
 
         <Reveal delay={0.1}>
