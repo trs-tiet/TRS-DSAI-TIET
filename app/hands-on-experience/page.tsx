@@ -42,7 +42,7 @@ export default function HandsOnExperiencePage() {
                   <div className="h-10 flex items-center">
                     {ex.logo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={ex.logo} alt={`${ex.name} logo`} className="h-6 w-auto" />
+                      <img src={ex.logo} alt={`${ex.name} logo`} className="h-[26px] w-auto" />
                     ) : (
                       <div className="h-10 w-10 bg-paper flex items-center justify-center text-[11px] font-semibold text-steel">
                         {ex.name.slice(0, 2).toUpperCase()}
