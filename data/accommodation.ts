@@ -29,13 +29,13 @@ const TIET_QUERY = "Thapar Institute of Engineering and Technology, Patiala";
 export const onCampusStay = [
   {
     name: "TIET Guest House",
-    audience: "Faculty & industry delegates",
-    note: "Bookable through the organizing committee — contact for availability.",
+    audience: "Invited speakers only",
+    note: "Reserved for invited speakers and arranged directly by the organizing committee — not available for general delegates or participants.",
   },
   {
     name: "Student Hostels",
-    audience: "Student participants",
-    note: "Limited seats, allocated through the organizing committee on a first-come basis.",
+    audience: "Invited speakers only",
+    note: "Reserved for invited speakers on campus during the workshop — not available for general delegates or participants. See nearby hotels below for other stay options.",
   },
 ];
 
