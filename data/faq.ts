@@ -3,7 +3,7 @@
 // Generic starter questions — edit freely.
 // ---------------------------------------------------------------------------
 
-export const faqs: { question: string; answer: string }[] = [
+export const faqs: { question: string; answer: string; image?: { src: string; alt: string } }[] = [
   {
     question: "Who can attend the workshop?",
     answer:
@@ -12,7 +12,11 @@ export const faqs: { question: string; answer: string }[] = [
   {
     question: "Is there a registration fee?",
     answer:
-      "Registration details, including any applicable fees for students versus professionals, will be shared on the registration page.",
+      "Yes. Fees vary by category and TRS membership status, and 18% GST applies on top of the base fee shown below. The fee covers access to all keynote lectures, technical sessions, the exhibition area, and networking events, along with the workshop kit, tea/coffee, and working lunch for both days. Registration is mandatory for participation, fees once paid are non-refundable, and accommodation/travel are not included. All participants receive an e-certificate on successful completion of the workshop.",
+    image: {
+      src: "/images/registration-fee-structure.jpg",
+      alt: "Registration fee structure — Industry Delegates, Faculty & Research Scientists, Research Scholars & Students, and TIET Patiala Students, for Non-TRS and TRS members, with 18% GST",
+    },
   },
   {
     question: "Where is the venue located?",
