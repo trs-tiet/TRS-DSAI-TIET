@@ -38,7 +38,7 @@ export const site = {
     email: "trs_tiet@thapar.edu",
     secondaryEmail: "coe_dsai@thapar.edu",
     // Add real numbers here, e.g. ["+91 98765 43210", "+91 91234 56789"]
-    phones: [] as string[],
+    phones: [+91 9888410523] as string[],
   },
 
   socials: [
