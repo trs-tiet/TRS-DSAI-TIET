@@ -96,7 +96,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors duration-300 ${
+      className={`sticky top-0 z-50 transition-colors duration-300 overflow-x-hidden ${
         scrolled ? "bg-paper/95 backdrop-blur shadow-sm" : "bg-paper"
       }`}
     >
@@ -106,7 +106,7 @@ export default function Navbar() {
           {site.eventName}
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-4 text-[12.5px] font-medium">
+        <nav className="hidden xl:flex items-center gap-4 text-[12.5px] font-medium flex-wrap">
           {flatLinks.map((l) => (
             <Link key={l.href} href={l.href} className="relative group py-1 whitespace-nowrap">
               {l.label}
@@ -116,29 +116,12 @@ export default function Navbar() {
           <HoverDropdown label="More" items={moreChildren} />
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3 shrink-0">
+        <div className="hidden xl:flex items-center gap-3 shrink-0">
           {scrolled && (
             <div className="text-[11px] text-steel font-medium mr-1 whitespace-nowrap">
               <Countdown compact />
             </div>
           )}
-          <div className="flex gap-2.5 items-center text-[12px]">
-            {site.socials.map((social) => (
-              social.url !== "#" && (
-                <a
-                  key={social.label}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-fg hover:text-crimson transition-colors font-medium"
-                  title={social.label}
-                >
-                  {social.label}
-                </a>
-              )
-            ))}
-          </div>
-          <div className="w-px h-5 bg-line mx-1" />
           <SearchModal />
           <ThemeToggle />
           <a
@@ -149,7 +132,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className="flex items-center gap-1 lg:hidden">
+        <div className="flex items-center gap-1 xl:hidden">
           <SearchModal />
           <ThemeToggle />
           <button
@@ -165,7 +148,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="lg:hidden bg-paper border-t border-line px-6 pb-6 flex flex-col gap-4 max-h-[75vh] overflow-y-auto">
+        <div className="xl:hidden bg-paper border-t border-line px-6 pb-6 flex flex-col gap-4 max-h-[75vh] overflow-y-auto">
           {flatLinks.map((l) => (
             <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-[15px] font-medium py-1">
               {l.label}
