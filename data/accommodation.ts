@@ -33,7 +33,7 @@ export const onCampusStay = [
     note: "Reserved for invited speakers and arranged directly by the organizing committee — not available for general delegates or participants.",
   },
   {
-    name: "Hostel' Guest Room",
+    name: "Hostels' Guest Rooms",
     audience: "Invited speakers only",
     note: "Reserved for invited speakers on campus during the workshop — not available for general delegates or participants. See nearby hotels below for other stay options.",
   },
