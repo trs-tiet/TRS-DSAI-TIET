@@ -64,7 +64,7 @@ function HoverDropdown({ label, items }: { label: string; items: { href: string;
         <span className="absolute left-0 -bottom-0.5 h-[1.5px] w-0 bg-crimson transition-all duration-200 group-hover:w-full" />
       </button>
       {open && (
-        <div className="absolute top-full right-0 pt-3 w-56 z-10">
+        <div className="absolute top-full right-0 pt-3 w-56 z-[999]">
           <div className="bg-surface border border-line shadow-lg py-2" role="menu">
             {items.map((c) => (
               <Link
@@ -96,17 +96,17 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors duration-300 overflow-x-hidden ${
+      className={`sticky top-0 z-50 transition-colors duration-300 ${
         scrolled ? "bg-paper/95 backdrop-blur shadow-sm" : "bg-paper"
       }`}
     >
-      <div className="wrap flex flex-wrap items-center justify-between xl:justify-center gap-3 xl:gap-6 py-3">
-        <Link href="/" className="flex items-center gap-2 text-[15.5px] font-semibold font-display shrink-0">
-          <Image src="/images/logos/trs-dsai-logo.png" alt={site.eventName} width={32} height={32} className="shrink-0" />
+      <div className="wrap flex items-center justify-between 2xl:justify-center gap-2 2xl:gap-5 py-3">
+        <Link href="/" className="flex items-center gap-1.5 text-[14px] font-semibold font-display shrink-0 whitespace-nowrap">
+          <Image src="/images/logos/trs-dsai-logo.png" alt={site.eventName} width={28} height={28} className="shrink-0" />
           {site.eventName}
         </Link>
 
-        <nav className="hidden xl:flex items-center justify-center gap-4 text-[12.5px] font-medium flex-wrap max-w-full min-w-0">
+        <nav className="hidden 2xl:flex items-center gap-3 text-[11.5px] font-medium shrink-0">
           {flatLinks.map((l) => (
             <Link key={l.href} href={l.href} className="relative group py-1 whitespace-nowrap">
               {l.label}
@@ -116,9 +116,9 @@ export default function Navbar() {
           <HoverDropdown label="More" items={moreChildren} />
         </nav>
 
-        <div className="hidden xl:flex items-center justify-center gap-3 flex-wrap max-w-full">
+        <div className="hidden 2xl:flex items-center gap-2.5 shrink-0">
           {scrolled && (
-            <div className="text-[11px] text-steel font-medium mr-1 whitespace-nowrap">
+            <div className="text-[10.5px] text-steel font-medium whitespace-nowrap">
               <Countdown compact />
             </div>
           )}
@@ -126,13 +126,13 @@ export default function Navbar() {
           <ThemeToggle />
           <a
             href={site.registerUrl}
-            className="bg-navy text-white px-3.5 py-2.5 text-[12.5px] font-semibold rounded-sm hover:bg-navy-deep transition-colors whitespace-nowrap"
+            className="bg-navy text-white px-3 py-2 text-[12px] font-semibold rounded-sm hover:bg-navy-deep transition-colors whitespace-nowrap"
           >
             Register now
           </a>
         </div>
 
-        <div className="flex items-center gap-1 xl:hidden">
+        <div className="flex items-center gap-1 2xl:hidden">
           <SearchModal />
           <ThemeToggle />
           <button
@@ -148,7 +148,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="xl:hidden bg-paper border-t border-line px-6 pb-6 flex flex-col gap-4 max-h-[75vh] overflow-y-auto">
+        <div className="2xl:hidden bg-paper border-t border-line px-6 pb-6 flex flex-col gap-4 max-h-[75vh] overflow-y-auto">
           {flatLinks.map((l) => (
             <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-[15px] font-medium py-1">
               {l.label}
