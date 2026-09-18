@@ -71,7 +71,7 @@ function HoverDropdown({ label, items }: { label: string; items: { href: string;
                 key={c.href}
                 href={c.href}
                 role="menuitem"
-                className="block px-4 py-2.5 text-[13.5px] hover:bg-paper transition-colors whitespace-nowrap"
+                className="block px-4 py-2.5 text-[15.5px] hover:bg-paper transition-colors whitespace-nowrap"
                 onClick={() => setOpen(false)}
               >
                 {c.label}
@@ -101,12 +101,12 @@ export default function Navbar() {
       }`}
     >
       <div className="wrap flex items-center justify-between 2xl:justify-center gap-2 2xl:gap-5 py-3">
-        <Link href="/" className="flex items-center gap-1.5 text-[14px] font-semibold font-display shrink-0 whitespace-nowrap">
+        <Link href="/" className="flex items-center gap-1.5 text-[16px] font-semibold font-display shrink-0 whitespace-nowrap">
           <Image src="/images/logos/trs-dsai-logo.png" alt={site.eventName} width={28} height={28} className="shrink-0" />
           {site.eventName}
         </Link>
 
-        <nav className="hidden 2xl:flex items-center gap-3 text-[11.5px] font-medium shrink-0">
+        <nav className="hidden 2xl:flex items-center gap-4 text-[13.5px] font-medium shrink-0">
           {flatLinks.map((l) => (
             <Link key={l.href} href={l.href} className="relative group py-1 whitespace-nowrap">
               {l.label}
@@ -118,7 +118,7 @@ export default function Navbar() {
 
         <div className="hidden 2xl:flex items-center gap-2.5 shrink-0">
           {scrolled && (
-            <div className="text-[10.5px] text-steel font-medium whitespace-nowrap">
+            <div className="text-[12.5px] text-steel font-medium whitespace-nowrap">
               <Countdown compact />
             </div>
           )}
@@ -126,7 +126,7 @@ export default function Navbar() {
           <ThemeToggle />
           <a
             href={site.registerUrl}
-            className="bg-navy text-white px-3 py-2 text-[12px] font-semibold rounded-sm hover:bg-navy-deep transition-colors whitespace-nowrap"
+            className="bg-navy text-white px-3 py-2 text-[14px] font-semibold rounded-sm hover:bg-navy-deep transition-colors whitespace-nowrap"
           >
             Register now
           </a>
