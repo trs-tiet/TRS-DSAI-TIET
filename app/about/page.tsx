@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import VideoBackground from "@/components/VideoBackground";
 import VideoDisclaimer from "@/components/VideoDisclaimer";
 import Reveal from "@/components/Reveal";
@@ -99,6 +100,36 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FOLLOW US SECTION */}
+      <section className="bg-surface py-20">
+        <div className="wrap text-center">
+          <Reveal>
+            <p className="text-[14px] text-steel font-semibold mb-3">Stay Updated</p>
+            <h2 className="font-display font-semibold text-[32px] md:text-[38px] mb-6">
+              Join our community
+            </h2>
+            <p className="text-[16px] text-fg max-w-2xl mx-auto mb-9">
+              Follow us on social media for the latest updates, speaker announcements, and event highlights.
+            </p>
+            <div className="flex gap-4 justify-center flex-wrap">
+              {site.socials.map((social) => (
+                social.url !== "#" && (
+                  <a
+                    key={social.label}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-navy text-white px-6 py-3 font-semibold text-[14px] rounded-sm hover:bg-navy-deep transition-colors"
+                  >
+                    {social.label}
+                  </a>
+                )
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 
