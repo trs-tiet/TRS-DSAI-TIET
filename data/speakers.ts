@@ -45,14 +45,14 @@ export const speakers: Speaker[] = [
   {
     name: "Dr. Alok Mukherjee",
     affiliation: "TRS President · CEO, i4Marine Technologies | Former DRDO Scientist",
-    type: "Academic",
+    type: "Industrial",
     photo: "/images/speakers/alok-mukherjee.jpg",
     bio: "Former DRDO scientist with a career focused on autonomous systems, robotics, and defence-oriented technology development. He holds an MSc in Physics with specialization in Electronics and an MTech in Computer Science. His professional work has included research and innovation in autonomous systems, while his current activities involve marine technologies and robotics applications through i4Marine Technologies.",
   },
   {
     name: "Dr. Rajesh Kumar",
     affiliation: "Head, Advanced Robotics, Addverb",
-    type: "Academic",
+    type: "Industrial",
     photo: "/images/speakers/rajesh-kumar.jpg",
     bio: "Principal Scientist who leads Advanced Robotics and AI initiatives at Addverb. His work spans collaborative robots, humanoids, legged robotic platforms, haptics, robot intelligence, and human–robot interaction. A President's Gold Medalist with a PhD from IIT Delhi, he has worked across the robotics intelligence stack, from low-level control and signal processing to planning, learning, interaction, and autonomous robotic systems.",
   },
@@ -124,7 +124,7 @@ export const speakers: Speaker[] = [
     affiliation: "Founder & CEO, Labellerr AI",
     type: "Industrial",
     photo: "/images/speakers/puneet-jindal.jpg",
-    bio: "Founder and CEO of Labellerr, an AI technology company focused on data preparation and computer-vision workflows. He brings more than a decade of experience in data science and has previously led data science teams at organizations including Walmart, Delhivery, and RateGain. His technical expertise includes computer vision, NLP, LLMs, data pipelines, and scalable AI model development.",
+    bio: "Founder and CEO of Labellerr AI, an AI technology company focused on data preparation and computer-vision workflows. He brings more than a decade of experience in data science and has previously led data science teams at organizations including Walmart, Delhivery, and RateGain. His technical expertise includes computer vision, NLP, LLMs, data pipelines, and scalable AI model development.",
   },
 ];
 
