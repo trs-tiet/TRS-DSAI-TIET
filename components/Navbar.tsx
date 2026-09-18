@@ -100,7 +100,7 @@ export default function Navbar() {
         scrolled ? "bg-paper/95 backdrop-blur shadow-sm" : "bg-paper"
       }`}
     >
-      <div className="wrap flex items-center justify-between py-4 gap-3">
+      <div className="wrap flex items-center justify-between xl:justify-center gap-3 xl:gap-10 py-4">
         <Link href="/" className="flex items-center gap-2 text-[15.5px] font-semibold font-display shrink-0">
           <Image src="/images/logos/trs-dsai-logo.png" alt={site.eventName} width={32} height={32} className="shrink-0" />
           {site.eventName}
