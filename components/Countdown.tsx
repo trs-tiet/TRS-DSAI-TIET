@@ -34,7 +34,7 @@ export default function Countdown({ compact = false }: { compact?: boolean }) {
   if (compact) {
     return (
       <span>
-        {time.days}d {time.hours}h {time.minutes}m — until TRS-DSAI 2026
+        {time.days}d {time.hours}h {time.minutes}m left
       </span>
     );
   }
