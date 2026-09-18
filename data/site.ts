@@ -31,7 +31,7 @@ export const site = {
     { value: "6", label: "Industry exhibitions" },
   ],
 
-  registerUrl: "https://forms.gle/NGwSaveazdeNHHXLA",
+  registerUrl: "https://forms.gle/TSQrcXzT1wstKEob9",
   brochureUrl: "/docs/trs-dsai-brochure.pdf",
 
   contact: {
