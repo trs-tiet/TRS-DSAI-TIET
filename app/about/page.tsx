@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import VideoBackground from "@/components/VideoBackground";
 import VideoDisclaimer from "@/components/VideoDisclaimer";
 import Reveal from "@/components/Reveal";
@@ -100,6 +101,41 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* REGISTRATION FEE STRUCTURE */}
+      <section className="bg-surface py-24">
+        <div className="wrap max-w-4xl">
+          <SectionHeading
+            title="Registration fee"
+            subtitle="Fees vary by category and TRS membership status. 18% GST applies on top of the base fee."
+          />
+          <Reveal>
+            <div className="border border-line overflow-hidden mb-8">
+              <Image
+                src="/images/registration-fee-structure.jpg"
+                alt="Registration fee structure — Industry Delegates, Faculty & Research Scientists, Research Scholars & Students, and TIET Patiala Students, for Non-TRS and TRS members, with 18% GST"
+                width={740}
+                height={380}
+                className="w-full h-auto"
+              />
+            </div>
+            <ul className="text-[14.5px] text-steel flex flex-col gap-2 max-w-2xl mb-9 list-disc pl-5">
+              <li>Access to all keynote lectures, technical sessions, exhibition area, and networking events.</li>
+              <li>Workshop kit, tea/coffee, and working lunch for all days.</li>
+              <li>Registration is mandatory for participation in the workshop.</li>
+              <li>Registration fee once paid will not be refunded.</li>
+              <li>Registration fee does not include accommodation or travel.</li>
+              <li>All participants will receive an e-certificate upon successful completion of the workshop.</li>
+            </ul>
+            <a
+              href={site.registerUrl}
+              className="inline-block bg-crimson text-white px-7 py-[15px] font-bold text-[14.5px] rounded-sm hover:bg-crimson-deep transition-colors"
+            >
+              Register now
+            </a>
+          </Reveal>
         </div>
       </section>
 
