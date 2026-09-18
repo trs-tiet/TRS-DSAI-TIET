@@ -29,14 +29,14 @@ export const exhibitors: Exhibitor[] = [
     logo: "/images/logos/mathworks.svg",
   },
   {
-    name: "Pukhya",
+    name: "Qualysis",
     focus: "Motion Capture Systems",
     description:
       "Pukhya provides advanced motion capture systems that track human and object movement with high spatial precision. Their technology is used in biomechanics, sports science, and robotics research that needs accurate 3D motion data. Expect a live demo of their motion capture setup and how the captured data is analyzed.",
     logo: "/images/logos/pukhya.jpg",
   },
   {
-    name: "Aerobe",
+    name: "Noraxon",
     focus: "Biomechanics, EMG & human performance",
     description:
       "Aerobe provides wearable sensor systems for biomechanics, EMG, and human performance analysis, used across clinical research, sports science, and ergonomics. Their tools measure how the body moves and generates force. The session covers how these measurements inform human-centered robotics research.",
