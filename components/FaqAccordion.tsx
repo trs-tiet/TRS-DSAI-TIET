@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { faqs } from "@/data/faq";
 
@@ -37,6 +38,19 @@ export default function FaqAccordion() {
                   className="overflow-hidden"
                 >
                   <p className="text-[14.5px] text-steel pb-6 max-w-xl">{item.answer}</p>
+                  {item.image && (
+                    <div className="pb-8 max-w-2xl">
+                      <div className="border border-line overflow-hidden">
+                        <Image
+                          src={item.image.src}
+                          alt={item.image.alt}
+                          width={740}
+                          height={380}
+                          className="w-full h-auto"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </motion.div>
               )}
             </AnimatePresence>
