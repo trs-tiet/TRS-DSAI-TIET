@@ -223,7 +223,7 @@ export default function HomePage() {
                     rel="noopener noreferrer"
                     className="bg-navy text-white px-6 py-3 font-semibold text-[14px] rounded-sm hover:bg-navy-deep transition-colors"
                   >
-                    Follow on {social.label}
+                    Follow us on {social.label}
                   </a>
                 )
               ))}
