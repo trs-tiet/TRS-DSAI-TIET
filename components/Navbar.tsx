@@ -100,13 +100,13 @@ export default function Navbar() {
         scrolled ? "bg-paper/95 backdrop-blur shadow-sm" : "bg-paper"
       }`}
     >
-      <div className="wrap flex items-center justify-between xl:justify-center gap-3 xl:gap-10 py-4">
+      <div className="wrap flex flex-wrap items-center justify-between xl:justify-center gap-3 xl:gap-6 py-3">
         <Link href="/" className="flex items-center gap-2 text-[15.5px] font-semibold font-display shrink-0">
           <Image src="/images/logos/trs-dsai-logo.png" alt={site.eventName} width={32} height={32} className="shrink-0" />
           {site.eventName}
         </Link>
 
-        <nav className="hidden xl:flex items-center gap-4 text-[12.5px] font-medium flex-wrap">
+        <nav className="hidden xl:flex items-center justify-center gap-4 text-[12.5px] font-medium flex-wrap max-w-full min-w-0">
           {flatLinks.map((l) => (
             <Link key={l.href} href={l.href} className="relative group py-1 whitespace-nowrap">
               {l.label}
@@ -116,7 +116,7 @@ export default function Navbar() {
           <HoverDropdown label="More" items={moreChildren} />
         </nav>
 
-        <div className="hidden xl:flex items-center gap-3 shrink-0">
+        <div className="hidden xl:flex items-center justify-center gap-3 flex-wrap max-w-full">
           {scrolled && (
             <div className="text-[11px] text-steel font-medium mr-1 whitespace-nowrap">
               <Countdown compact />
