@@ -1,3 +1,4 @@
+
 # TRS-DSAI 2026 Workshop Website
 
 Next.js 14 (App Router) + TypeScript + Tailwind CSS + Framer Motion.
