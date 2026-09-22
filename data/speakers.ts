@@ -126,6 +126,27 @@ export const speakers: Speaker[] = [
     photo: "/images/speakers/puneet-jindal.jpg",
     bio: "Founder and CEO of Labellerr AI, an AI technology company focused on data preparation and computer-vision workflows. He brings more than a decade of experience in data science and has previously led data science teams at organizations including Walmart, Delhivery, and RateGain. His technical expertise includes computer vision, NLP, LLMs, data pipelines, and scalable AI model development.",
   },
+  {
+    name: "Dr. Madan Dabbeeru",
+    affiliation: "Founder & CEO, Eizen",
+    type: "Industrial",
+    photo: "/images/speakers/madan-dabbeeru.jpg",
+    bio: "Founder and CEO of Eizen, an AI company developing systems that move from visual intelligence toward action intelligence. He holds a PhD in AI and has more than 15 years of experience in artificial intelligence. His research and professional interests include robotics, cognitive science, computer vision, medical imaging, reinforcement learning, and autonomous decision-making for intelligent systems.",
+  },
+  {
+    name: "Prof. Santhakumar Mohan",
+    affiliation: "Professor, IIT Palakkad",
+    type: "Academic",
+    photo: "/images/speakers/santhakumar-mohan.jpg",
+    bio: "Professor of Mechanical Engineering at IIT Palakkad specializing in robotics and motion control. His research includes mechanism design, service and field robots, underwater vehicles, manipulators, nonlinear motion control, medical assistive devices, and rehabilitation robotics. He has also worked extensively on mobile robots, autonomous vehicles, agricultural robots, exoskeletons, and underwater robotic systems through multidisciplinary research projects.",
+  },
+  {
+    name: "Prof. V. Hari Kumar",
+    affiliation: "Professor, NIT Warangal",
+    type: "Academic",
+    photo: "/images/speakers/v-hari-kumar.jpg",
+    bio: "Faculty member at NIT Warangal whose research spans shape and topology optimization, isogeometric analysis, finite-element methods, geometric modelling, CAD, and robotics. His robotics research includes kinematics, path planning, mobile-robot coverage planning, and industrial robot applications. He also works on AI for engineering design and has contributed to research on optimization-driven robotic systems.",
+  },
 ];
 
 export const academicSpeakers: Speaker[] = speakers.filter((s) => s.type === "Academic");
