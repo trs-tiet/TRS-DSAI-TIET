@@ -1,4 +1,3 @@
-
 # TRS-DSAI 2026 Workshop Website
 
 Next.js 14 (App Router) + TypeScript + Tailwind CSS + Framer Motion.
@@ -10,11 +9,9 @@ trs-dsai-website/
 ├── app/                     Pages (Next.js App Router — one folder = one route)
 │   ├── layout.tsx           Root layout: fonts, Navbar, Footer, theme-init script
 │   ├── page.tsx             Home
-│   ├── about/page.tsx
+│   ├── about/page.tsx       Includes the Registration fee section
 │   ├── organizers/page.tsx
-│   ├── speakers/
-│   │   ├── academia/page.tsx
-│   │   └── industrial/page.tsx
+│   ├── speakers/page.tsx    Single grid (Academic + Industrial together)
 │   ├── schedule/page.tsx
 │   ├── sponsors/page.tsx
 │   ├── hands-on-experience/page.tsx   (formerly "exhibitions")
@@ -23,45 +20,68 @@ trs-dsai-website/
 │   │   ├── thapar/page.tsx            On-campus spots
 │   │   └── patiala/page.tsx           City attractions
 │   ├── gallery/page.tsx
-│   ├── faq/page.tsx
+│   ├── faq/page.tsx                   Includes the fee table on the
+│   │                                  "Is there a registration fee?" answer
 │   ├── contact/page.tsx
 │   └── globals.css          Theme CSS variables (light/dark) live here
 ├── components/              Reusable UI pieces
-│   ├── Navbar.tsx           Flat links + hover dropdowns (Speakers, Places to
-│   │                        Visit) + search icon + theme toggle
+│   ├── Navbar.tsx           Flat links + "More" dropdown + search icon +
+│   │                        theme toggle. Full desktop nav only shows at
+│   │                        2xl (1536px+) — below that it's the hamburger
+│   │                        menu, since the full link set + countdown +
+│   │                        actions need that much room to stay on one line.
 │   ├── ThemeToggle.tsx      Light/dark switch, persists to localStorage
 │   ├── SearchModal.tsx      Site-wide search (Ctrl/Cmd+K), reads data/searchIndex.ts
-│   ├── Footer.tsx
+│   ├── Footer.tsx           Includes workshop logo + social links
 │   ├── Countdown.tsx        Live countdown (hero + compact navbar versions)
 │   ├── VideoBackground.tsx  Muted/looped background video helper
 │   ├── Reveal.tsx           Scroll fade-in wrapper — replays every time an
 │   │                        element scrolls in/out of view (Framer Motion)
 │   ├── SectionHeading.tsx
 │   ├── CTASection.tsx
-│   ├── SpeakerCard.tsx      Photo-forward (250×250) speaker card + bio modal
+│   ├── SpeakerCard.tsx      Photo-forward (250×250) speaker card + bio modal.
+│   │                        Falls back to an initials badge automatically
+│   │                        when a speaker has no `photo` set.
 │   ├── PlaceCard.tsx        Shared card for both places-to-visit pages
-│   └── FaqAccordion.tsx
+│   ├── RegistrationFeeTable.tsx   Real HTML table (not an image) — used on
+│   │                              both the About page and the FAQ page so
+│   │                              it never blurs at any screen size
+│   └── FaqAccordion.tsx     Renders RegistrationFeeTable inline for any
+│                            FAQ item with `feeTable: true`
 ├── data/                    ⭐ EDIT THESE, not the components, for content changes
-│   ├── site.ts              Dates, venue, register/brochure links, contact, stats
-│   ├── speakers.ts          academicSpeakers + industrialSpeakers (15 total)
+│   ├── site.ts              Dates, venue, register/brochure links, contact,
+│   │                        socials (LinkedIn is live), stats
+│   ├── speakers.ts          academicSpeakers + industrialSpeakers (18 total)
 │   ├── organizers.ts        Real organizing committee (5, from the brochure)
 │   ├── sponsors.ts          Mirrors data/exhibitors.ts (same 6 companies)
-│   ├── exhibitors.ts        Hands-on Experience partners
-│   ├── accommodation.ts     Hotels (with booking/maps links), how-to-reach routes
+│   ├── exhibitors.ts        Hands-on Experience partners. Two entries show
+│   │                        the global brand as `name` (Qualysis, Noraxon)
+│   │                        with their India distributor (Pukhya, Aerobe)
+│   │                        named in the `description` and used for `logo`
+│   │                        — intentional, not a mismatch
+│   ├── registrationFees.ts  Fee rows + notes — feeds RegistrationFeeTable
+│   ├── accommodation.ts     Hotels (with booking/maps links), how-to-reach
+│   │                        routes. On-campus stay (Guest House / hostels)
+│   │                        is marked invited-speakers-only, not general use
 │   ├── places-thapar.ts     On-campus spots
-│   ├── places-patiala.ts    City attractions (formerly places.ts)
-│   ├── schedule.ts          Day-wise themes and sessions
+│   ├── places-patiala.ts    City attractions (formerly places.ts) — has
+│   │                        real photos in public/images/places/
+│   ├── schedule.ts          Day-wise themes (no session-by-session timing yet)
 │   ├── faq.ts               FAQ questions/answers
 │   └── searchIndex.ts       Aggregates all of the above for site search
 ├── public/
-│   ├── videos/              about.mp4, schedule.mp4, hands-on-experience.mp4
+│   ├── videos/              about.mp4, schedule.mp4, hands-on-experience.mp4,
+│   │                        organizers.mp4, sponsors.mp4, home-teaser.mp4
 │   │                        (hero.mp4 removed — Home now uses a static photo)
 │   ├── images/
-│   │   ├── hero/            tiet-admin-building.jpg (2.35:1 crop, Home banner)
-│   │   ├── logos/           Real institutional + exhibitor logos
+│   │   ├── hero/            thapar-hero.jpg (2.35:1 crop, Home banner)
+│   │   ├── logos/           Real institutional + exhibitor logos, plus
+│   │   │                    trs-dsai-logo.png (workshop logo — Navbar, Footer)
 │   │   ├── speakers/        Real speaker photos (500×500, cropped square)
 │   │   ├── organizers/      Real organizer photos (500×500, cropped square)
-│   │   └── gallery/         Event photos (listed in app/gallery/page.tsx)
+│   │   ├── places/          Real photos for Patiala attractions
+│   │   └── gallery/         Event photos (listed in app/gallery/page.tsx) —
+│   │                        still empty, see "Content still needed" below
 │   └── docs/
 │       └── trs-dsai-brochure.pdf   Latest corrected brochure
 ├── package.json
@@ -93,25 +113,29 @@ a deliberate design choice, not a bug.
 ## Where each video is used
 
 
-| File                        | Page          | Placement                    |
-|-----------------------------|---------------|-------------------------------|
-| `public/videos/hero.mp4`         | Home          | Full hero background (quadruped robot) |
-| `public/videos/about.mp4`        | Home, About   | Framed accent / banner        |
-| `public/videos/schedule.mp4`     | Schedule      | Banner accent (walk/jump robot) |
-| `public/videos/exhibitions.mp4`  | Exhibitions   | Banner accent                 |
+| File                              | Page          | Placement                              |
+|------------------------------------|---------------|-----------------------------------------|
+| `public/videos/home-teaser.mp4`   | Home          | Framed accent within a section (not the hero — the hero is now the static `thapar-hero.jpg` photo) |
+| `public/videos/about.mp4`         | About         | Banner accent                          |
+| `public/videos/schedule.mp4`      | Schedule      | Banner accent                          |
+| `public/videos/hands-on-experience.mp4` | Hands-on Experience | Banner accent                    |
+| `public/videos/organizers.mp4`    | Organizers    | Banner accent                          |
+| `public/videos/sponsors.mp4`      | Sponsors      | Banner accent                          |
 
 To swap a video, just replace the file — same filename, same folder.
 
 ## Editing content (no code knowledge needed for most of this)
 
-- **Change dates, venue, register link, brochure link, contact emails** → `data/site.ts`
+- **Change dates, venue, register link, brochure link, contact emails/phone, socials** → `data/site.ts`
 - **Add/remove/edit a speaker** → `data/speakers.ts`
-- **Add/remove an exhibitor** → `data/exhibitors.ts`
+- **Add/remove an exhibitor** → `data/exhibitors.ts` (also updates `/sponsors`, which mirrors it)
+- **Edit the registration fee table** → `data/registrationFees.ts` (shown as a real table, not an image, on both `/about` and `/faq`)
 - **Update the day-wise schedule** → `data/schedule.ts`
 - **Add an FAQ** → `data/faq.ts`
 - **Add gallery photos** → drop files in `public/images/gallery/`, list filenames in `app/gallery/page.tsx`
 - **Add the real brochure PDF** → `public/docs/trs-dsai-brochure.pdf`
 - **Add real logos** → `public/images/logos/` (see that folder's README)
+- **Swap the workshop logo** (Navbar, Footer, and the social-preview/OG image) → `public/images/logos/trs-dsai-logo.png` and `public/og-image.jpg`
 
 The registration button everywhere on the site reads `site.registerUrl` in
 `data/site.ts` — update that one line once you have the form link.
@@ -170,26 +194,37 @@ in that one file.
 
 | What's incomplete | Where it shows | Where to fix it |
 |---|---|---|
-| No sponsor logos beyond the 6 hands-on partners | `/sponsors` | `data/sponsors.ts` |
+| No sponsor logos beyond the 6 hands-on partners | `/sponsors` | `data/sponsors.ts` (mirrors `data/exhibitors.ts`) |
 | No gallery photos yet | `/gallery` | Add files to `public/images/gallery/`, list them in `app/gallery/page.tsx` |
-| Speaker bios are one-line placeholders (name/affiliation only) | `/speakers/academia`, `/speakers/industrial` (click a card) | `data/speakers.ts` → `bio` field |
-| Schedule has themes but no session-by-session timing | `/schedule` | `data/schedule.ts` → `sessions` array |
+| Schedule has day-level themes but no session-by-session timing | `/schedule` | `data/schedule.ts` |
 | "In Thapar" places have no photos, and only 3 confirmed spots | `/places-to-visit/thapar` | `data/places-thapar.ts`; add photos to `public/images/places/` |
-| "In Patiala" places have no photos yet | `/places-to-visit/patiala` | Add files to `public/images/places/` (see that folder's README) |
-| Contact page has no phone number | `/contact` | `data/site.ts` → `contact.phones` (empty array — add strings like `"+91 98765 43210"` and the Phone section appears automatically) |
+| Photos for the 3 newest speakers are in but worth a quick crop/quality check against the rest | `/speakers` | `public/images/speakers/` |
 
 ## Content already sourced for you
 
-- **All 15 speakers + 5 organizers**: real photos (cropped square, 500×500),
-  corrected names/titles from the final brochure.
-- **All 6 exhibitor/sponsor logos + 3 institutional logos**: real files, not
-  placeholders.
+- **All 18 speakers + 5 organizers**: real photos (cropped square, 500×500)
+  and full bios — corrected names/titles from the final brochure plus 3
+  later additions (Dr. Madan Dabbeeru, Prof. Santhakumar Mohan, Prof. V. Hari
+  Kumar).
+- **All 6 exhibitor/sponsor logos + 3 institutional logos + the workshop's
+  own logo**: real files, not placeholders. Two entries intentionally list
+  the global brand as the display name (Qualysis, Noraxon) while their
+  `description` and `logo` reference the India distributor (Pukhya, Aerobe)
+  — that pairing is deliberate, not a data error.
+- **Registration fee structure**: real fee table (category × TRS/Non-TRS ×
+  GST) on `/about` and `/faq`, rendered as an actual table so it's crisp at
+  any screen size.
+- **Contact info**: real phone number and email; on-campus accommodation
+  (Guest House / hostels) is correctly marked as invited-speakers-only, with
+  nearby hotels listed for everyone else.
+- **Social links**: LinkedIn is live (Navbar, Footer, Home, About, Contact);
+  Instagram/YouTube are still placeholder `#` links pending real accounts.
 - **Accommodation & Travel**: real nearby hotels, Booking.com search links,
   Google Maps pins, and air/rail/road routes with "Get directions" links —
   compiled from public travel listings and TIET's own "Reaching TIET" page.
   Double-check current pricing/availability before publishing.
-- **Places to Visit — In Patiala**: real attractions with links to Wikipedia
-  or official tourism pages.
+- **Places to Visit — In Patiala**: real attractions with real photos and
+  links to Wikipedia or official tourism pages.
 - **Places to Visit — In Thapar**: only the 3 spots you named are included —
   I couldn't independently verify further named campus landmarks beyond
   generic facility listings, so I didn't pad the list with guesses.
