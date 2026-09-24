@@ -1,14 +1,10 @@
 // ---------------------------------------------------------------------------
 // SPONSORS
 // Tracked independently from data/exhibitors.ts (the Hands-on Experience
-// page) — the two lists can differ in order, membership, or copy.
+// page) — content can differ, but the order is kept in sync with it by
+// request. If you reorder one, reorder the other to match.
 // Descriptions are high-level and based on each company's public product
 // category — edit freely with more specific/official copy if you have it.
-//
-// NOTE: Edutech's description below is a generic best-effort placeholder —
-// a web search for "Edutech" turned up dozens of unrelated companies with
-// that name, so nothing could be confirmed against this specific sponsor.
-// Swap in official copy if you have it.
 // ---------------------------------------------------------------------------
 
 export type SponsorTier = "Sponsor";
@@ -36,8 +32,9 @@ export const sponsors: Sponsor[] = [
     tier: "Sponsor",
     focus: "Education Technology & Digital Learning Solutions",
     description:
-      "Edutech supplies robotics and STEM lab equipment and kits used for hands-on technical education. Their offerings support skill-building in robotics, automation, and engineering fundamentals for students and early-career researchers.",
+      "Edutech designs and builds hands-on STEAM learning spaces, engineering labs, and technology-based learning solutions for schools, universities, and industry, with a presence across the Middle East and India (Edutech India). Their work spans lab design and fit-out, curriculum development, and edtech platforms for immersive and technology-driven learning.",
     logo: "/images/logos/edutech.jpg",
+    url: "https://www.edutech.com/",
   },
   {
     name: "Delsys",
