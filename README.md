@@ -53,7 +53,9 @@ trs-dsai-website/
 │   │                        socials (LinkedIn is live), stats
 │   ├── speakers.ts          academicSpeakers + industrialSpeakers (18 total)
 │   ├── organizers.ts        Real organizing committee (5, from the brochure)
-│   ├── sponsors.ts          Mirrors data/exhibitors.ts (same 6 companies)
+│   ├── sponsors.ts          Separate file from exhibitors.ts, but kept in the
+│   │                        same company order by request — reorder both
+│   │                        together if you change one
 │   ├── exhibitors.ts        Hands-on Experience partners. Two entries show
 │   │                        the global brand as `name` (Qualysis, Noraxon)
 │   │                        with their India distributor (Pukhya, Aerobe)
@@ -128,7 +130,8 @@ To swap a video, just replace the file — same filename, same folder.
 
 - **Change dates, venue, register link, brochure link, contact emails/phone, socials** → `data/site.ts`
 - **Add/remove/edit a speaker** → `data/speakers.ts`
-- **Add/remove an exhibitor** → `data/exhibitors.ts` (also updates `/sponsors`, which mirrors it)
+- **Add/remove/reorder an exhibitor (Hands-on Experience page)** → `data/exhibitors.ts`
+- **Add/remove/reorder a sponsor** → `data/sponsors.ts` — separate content from `data/exhibitors.ts`, but currently kept in the same order by request, so mirror any reorder in both files
 - **Edit the registration fee table** → `data/registrationFees.ts` (shown as a real table, not an image, on both `/about` and `/faq`)
 - **Update the day-wise schedule** → `data/schedule.ts`
 - **Add an FAQ** → `data/faq.ts`
@@ -194,7 +197,7 @@ in that one file.
 
 | What's incomplete | Where it shows | Where to fix it |
 |---|---|---|
-| No sponsor logos beyond the 6 hands-on partners | `/sponsors` | `data/sponsors.ts` (mirrors `data/exhibitors.ts`) |
+| No sponsor logos beyond the 8 confirmed sponsors | `/sponsors` | `data/sponsors.ts` (kept in the same order as `data/exhibitors.ts`, but separate content) |
 | No gallery photos yet | `/gallery` | Add files to `public/images/gallery/`, list them in `app/gallery/page.tsx` |
 | Schedule has day-level themes but no session-by-session timing | `/schedule` | `data/schedule.ts` |
 | "In Thapar" places have no photos, and only 3 confirmed spots | `/places-to-visit/thapar` | `data/places-thapar.ts`; add photos to `public/images/places/` |
