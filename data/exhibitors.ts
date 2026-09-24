@@ -1,9 +1,8 @@
 // ---------------------------------------------------------------------------
 // INDUSTRIAL EXHIBITION / HANDS-ON SESSIONS
-// Order matches the final brochure. Sponsors are tracked separately in
-// data/sponsors.ts — the two lists no longer need to match.
-// Descriptions are high-level and based on each company's public product
-// category — edit freely with more specific/official copy if you have it.
+// Order matches data/sponsors.ts (kept in sync by request). Descriptions are
+// high-level and based on each company's public product category — edit
+// freely with more specific/official copy if you have it.
 // ---------------------------------------------------------------------------
 
 export type Exhibitor = {
@@ -11,16 +10,10 @@ export type Exhibitor = {
   focus: string;
   description: string;
   logo?: string; // path in /public/images/logos/
+  url?: string;
 };
 
 export const exhibitors: Exhibitor[] = [
-  {
-    name: "Delsys",
-    focus: "Wearable EMG and human-robot interaction",
-    description:
-      "Delsys designs high-fidelity wearable EMG (electromyography) sensors used to measure muscle activity with research-grade precision. Their systems support biomechanics, rehabilitation science, and studies linking human muscle signals to robotic control. Expect a hands-on look at surface EMG acquisition and how it feeds into human-robot interaction research.",
-    logo: "/images/logos/delsys.svg",
-  },
   {
     name: "MathWorks",
     focus: "MATLAB and Simulink applications",
@@ -29,11 +22,33 @@ export const exhibitors: Exhibitor[] = [
     logo: "/images/logos/mathworks.svg",
   },
   {
+    name: "Edutech",
+    focus: "Education Technology & Digital Learning Solutions",
+    description:
+      "Edutech designs and builds hands-on STEAM learning spaces, engineering labs, and technology-based learning solutions for schools, universities, and industry, with a presence across the Middle East and India (Edutech India). Their work spans lab design and fit-out, curriculum development, and edtech platforms for immersive and technology-driven learning. The session covers how their STEAM space and lab design approach supports hands-on technical education.",
+    logo: "/images/logos/edutech.jpg",
+    url: "https://www.edutech.com/",
+  },
+  {
+    name: "Delsys",
+    focus: "Wearable EMG and human-robot interaction",
+    description:
+      "Delsys designs high-fidelity wearable EMG (electromyography) sensors used to measure muscle activity with research-grade precision. Their systems support biomechanics, rehabilitation science, and studies linking human muscle signals to robotic control. Expect a hands-on look at surface EMG acquisition and how it feeds into human-robot interaction research.",
+    logo: "/images/logos/delsys.svg",
+  },
+  {
     name: "Qualysis",
     focus: "Motion Capture Systems",
     description:
       "Pukhya provides advanced motion capture systems that track human and object movement with high spatial precision. Their technology is used in biomechanics, sports science, and robotics research that needs accurate 3D motion data. Expect a live demo of their motion capture setup and how the captured data is analyzed.",
     logo: "/images/logos/pukhya.jpg",
+  },
+  {
+    name: "Vicon",
+    focus: "Optical motion capture systems",
+    description:
+      "Vicon is a long-established provider of optical motion capture technology, used across engineering, life sciences, and entertainment applications where precise 3D movement data matters. Their camera-based systems deliver sub-millimetre tracking accuracy for biomechanics, robotics, and animation research. The session covers how their motion capture pipeline goes from raw camera data to usable motion analysis.",
+    logo: "/images/logos/vicon.jpg",
   },
   {
     name: "Noraxon",
