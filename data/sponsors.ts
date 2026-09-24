@@ -34,7 +34,7 @@ export const sponsors: Sponsor[] = [
   {
     name: "Edutech",
     tier: "Sponsor",
-    focus: "Educational robotics & STEM lab equipment",
+    focus: "Education Technology & Digital Learning Solutions",
     description:
       "Edutech supplies robotics and STEM lab equipment and kits used for hands-on technical education. Their offerings support skill-building in robotics, automation, and engineering fundamentals for students and early-career researchers.",
     logo: "/images/logos/edutech.jpg",
