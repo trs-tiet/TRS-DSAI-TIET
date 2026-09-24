@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------------------
 // INDUSTRIAL EXHIBITION / HANDS-ON SESSIONS
-// Order matches the final brochure. These same 6 companies are also listed
-// as sponsors — see data/sponsors.ts, which mirrors this file automatically.
+// Order matches the final brochure. Sponsors are tracked separately in
+// data/sponsors.ts — the two lists no longer need to match.
 // Descriptions are high-level and based on each company's public product
 // category — edit freely with more specific/official copy if you have it.
 // ---------------------------------------------------------------------------
