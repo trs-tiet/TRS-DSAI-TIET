@@ -18,7 +18,7 @@ export const faqs: { question: string; answer: string; feeTable?: boolean }[] = 
   {
     question: "Where is the venue located?",
     answer:
-      "The workshop will be held at LT-201 & LT-202, Thapar Institute of Engineering & Technology (TIET), Patiala, Punjab.",
+      "The workshop will be held at LP-108 & LP-109, Thapar Institute of Engineering & Technology (TIET), Patiala, Punjab.",
   },
   {
     question: "Will certificates be provided?",
