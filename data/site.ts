@@ -20,7 +20,7 @@ export const site = {
     name: "TIET, Patiala",
     fullAddress:
       "Thapar Institute of Engineering and Technology,\nBhadson Road, Adarsh Nagar,\nPatiala, Punjab\nIndia - 147004",
-    rooms: "LT-201 & LT-202, CSED",
+    rooms: "LP-108 & LP-109, CSED",
     mapEmbedUrl:
       "https://maps.google.com/maps?q=Thapar%20Institute%20of%20Engineering%20and%20Technology%20Patiala&t=m&z=15&output=embed",
   },
