@@ -40,9 +40,6 @@ export default function SchedulePage() {
                       {day.theme}
                     </h2>
                   </div>
-                  <div className="text-[13.5px] text-steel md:text-right whitespace-nowrap">
-                    {day.room}
-                  </div>
                 </div>
 
                 <div className="border-t border-line pt-6">
