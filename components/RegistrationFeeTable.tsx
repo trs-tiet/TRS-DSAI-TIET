@@ -1,7 +1,9 @@
 import { feeRows } from "@/data/registrationFees";
+import { site } from "@/data/site";
 
 export default function RegistrationFeeTable() {
   return (
+    <>
     <div className="border border-line overflow-x-auto">
       <table className="w-full text-left border-collapse min-w-[560px]">
         <thead>
@@ -36,5 +38,9 @@ export default function RegistrationFeeTable() {
         </tbody>
       </table>
     </div>
+    {site.registrationNotice && (
+      <p className="mt-3 text-[14px] font-semibold text-crimson">{site.registrationNotice}</p>
+    )}
+    </>
   );
 }
