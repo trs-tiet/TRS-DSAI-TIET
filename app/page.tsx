@@ -53,6 +53,14 @@ export default function HomePage() {
             Countdown shown in IST (India Standard Time)
           </p>
 
+          {site.registrationNotice && (
+            <p className="text-[15px] font-bold mb-4">
+              <span className="bg-white text-crimson px-3 py-1.5 rounded-sm inline-block">
+                {site.registrationNotice}
+              </span>
+            </p>
+          )}
+
           <div className="flex gap-4 flex-wrap">
             <a
               href={site.registerUrl}
