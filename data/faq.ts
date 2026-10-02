@@ -16,6 +16,11 @@ export const faqs: { question: string; answer: string; feeTable?: boolean }[] = 
     feeTable: true,
   },
   {
+    question: "What is the last date to register?",
+    answer:
+      "The registration deadline has been extended to 12th October, 2026. Seats are limited, so we recommend registering early.",
+  },
+  {
     question: "Where is the venue located?",
     answer:
       "The workshop will be held at LP-108 & LP-109, Thapar Institute of Engineering & Technology (TIET), Patiala, Punjab.",
