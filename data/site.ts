@@ -31,6 +31,9 @@ export const site = {
     { value: "6", label: "Industry exhibitions" },
   ],
 
+  // Shown on the home hero and the "Register now" band. Set to "" to hide.
+  registrationNotice: "Registration extended till 12th October, 2026",
+
   registerUrl: "https://forms.gle/TSQrcXzT1wstKEob9",
   brochureUrl: "/docs/trs-dsai-brochure.pdf",
 
