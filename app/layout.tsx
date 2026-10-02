@@ -66,6 +66,14 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body">
+        {site.registrationNotice && (
+          <a
+            href={site.registerUrl}
+            className="block bg-crimson text-white text-center text-[13.5px] font-semibold px-4 py-2 hover:bg-crimson-deep transition-colors"
+          >
+            {site.registrationNotice} · Register now
+          </a>
+        )}
         <Navbar />
         <main>{children}</main>
         <Footer />
