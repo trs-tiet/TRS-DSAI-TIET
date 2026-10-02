@@ -55,7 +55,7 @@ export default function HomePage() {
 
           {site.registrationNotice && (
             <p className="text-[15px] font-bold mb-4">
-              <span className="bg-white text-crimson px-3 py-1.5 rounded-sm inline-block">
+              <span className="border border-white bg-white text-crimson [.dark_&]:bg-transparent [.dark_&]:text-white px-3 py-1.5 rounded-sm inline-block">
                 {site.registrationNotice}
               </span>
             </p>
