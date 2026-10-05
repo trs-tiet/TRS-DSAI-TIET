@@ -15,19 +15,19 @@ export type Exhibitor = {
 
 export const exhibitors: Exhibitor[] = [
   {
-    name: "MathWorks",
-    focus: "MATLAB and Simulink applications",
-    description:
-      "MathWorks makes MATLAB and Simulink, widely used platforms for numerical computing, algorithm development, and model-based design across engineering and robotics. The session will demonstrate how these tools apply to robotics workflows — from control system design through simulation to deployment on real hardware.",
-    logo: "/images/logos/mathworks.svg",
-  },
-  {
     name: "Edutech",
     focus: "Education Technology & Digital Learning Solutions",
     description:
       "Edutech designs and builds hands-on STEAM learning spaces, engineering labs, and technology-based learning solutions for schools, universities, and industry, with a presence across the Middle East and India (Edutech India). Their work spans lab design and fit-out, curriculum development, and edtech platforms for immersive and technology-driven learning. The session covers how their STEAM space and lab design approach supports hands-on technical education.",
     logo: "/images/logos/edutech.jpg",
     url: "https://www.edutech.com/",
+  },
+  {
+    name: "MathWorks",
+    focus: "MATLAB and Simulink applications",
+    description:
+      "MathWorks makes MATLAB and Simulink, widely used platforms for numerical computing, algorithm development, and model-based design across engineering and robotics. The session will demonstrate how these tools apply to robotics workflows — from control system design through simulation to deployment on real hardware.",
+    logo: "/images/logos/mathworks.svg",
   },
   {
     name: "Delsys",
