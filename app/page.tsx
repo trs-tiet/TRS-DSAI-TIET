@@ -125,7 +125,7 @@ export default function HomePage() {
       <section className="bg-paper py-28">
         <div className="wrap">
           <SectionHeading
-            title="Two days, two focuses"
+            title="Two days, Four focuses"
             subtitle="Each day is built around a distinct application area, with talks and exhibitions to match."
           />
         </div>
