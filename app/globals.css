@@ -65,3 +65,21 @@ textarea:focus-visible {
     padding-right: 32px;
   }
 }
+
+/* ---------- Schedule grid (components/ScheduleGrid.tsx) ---------- */
+.sched { overflow-x: auto; background: rgb(var(--color-surface)); border: 1px solid rgb(var(--color-border) / 0.1); }
+.sched table { border-collapse: collapse; min-width: 1180px; width: 100%; font-size: 13px; text-align: center; }
+.sched th, .sched td { border: 1px solid rgb(var(--color-border) / 0.1); padding: 8px 6px; vertical-align: middle; }
+.sched thead th { background: rgb(var(--color-bg)); font-weight: 700; color: rgb(var(--color-fg)); white-space: nowrap; }
+.sched thead th:nth-child(12), .sched thead th:nth-child(13) { width: 165px; }
+.sched td.day { font-family: var(--font-space-grotesk); font-weight: 700; font-size: 16px; white-space: nowrap; min-width: 92px; }
+.sched td.day small { display: block; font-family: var(--font-inter); font-weight: 800; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: #B08A2E; margin-bottom: 4px; }
+.sched td.tk { background: linear-gradient(90deg, #0F2143 0%, #1F4478 50%, #0F2143 100%); color: #fff; font-family: var(--font-space-grotesk); font-weight: 700; font-size: 15px; }
+.sched td.br { background: #EFECE6; color: #7A7468; font-weight: 600; }
+.sched td.cer { background: linear-gradient(160deg, #E9D29A, #CFA84E); color: #0F2143; font-family: var(--font-space-grotesk); font-weight: 700; font-size: 14px; }
+.sched td.hos { background: #EAF1E6; color: #2F5A1F; font-weight: 600; box-shadow: inset 3px 0 0 #6FA352; }
+.sched td.sp b { display: block; font-weight: 600; }
+.sched td.sp i { display: block; font-style: normal; color: rgb(var(--color-muted)); }
+.sched tr.sep td { background: #CFA84E; padding: 2px; }
+.dark .sched td.br { background: #2A2D33; color: #A8A397; }
+.dark .sched td.hos { background: #1F2B1B; color: #B5D69F; }
