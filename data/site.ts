@@ -28,7 +28,7 @@ export const site = {
   stats: [
     { value: "100+", label: "Participants" },
     { value: "18+", label: "Invited speakers" },
-    { value: "10", label: "Industry exhibitions" },
+    { value: "10+", label: "Industry exhibitions" },
   ],
 
   // Shown on the home hero and the "Register now" band. Set to "" to hide.
