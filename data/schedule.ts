@@ -18,15 +18,15 @@ export const scheduleDays: ScheduleDay[] = [
   {
     dayLabel: "Day 1",
     date: "30 October 2026",
-    theme: "Robotics and AI in Healthcare",
-    room: "LT-201, TIET Patiala",
+    theme: "Autonomous Systems · Robotics in Industry 4.0",
+    room: "Auditorium & LP-109, TIET Patiala",
     // image: "/images/schedule/day1.jpg",
   },
   {
     dayLabel: "Day 2",
     date: "31 October 2026",
-    theme: "Robotics and AI in Defence and Rescue Applications",
-    room: "LT-202, TIET Patiala",
+    theme: "AI/ML in Robotics · Robotics in Healthcare",
+    room: "LP-109, TIET Patiala",
     // image: "/images/schedule/day2.jpg",
   },
 ];
