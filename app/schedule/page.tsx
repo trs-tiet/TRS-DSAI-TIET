@@ -21,7 +21,7 @@ export default function SchedulePage() {
         <div className="relative z-10 wrap pb-12">
           <p className="text-[14px] text-white/70 mb-3">Programme</p>
           <h1 className="font-display font-bold text-[36px] md:text-[52px] max-w-2xl">
-            Two days, two focuses
+            Two days, Four focuses
           </h1>
         </div>
       </section>
