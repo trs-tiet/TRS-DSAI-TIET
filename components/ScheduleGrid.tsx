@@ -1,5 +1,7 @@
 // Full two-day programme grid. Edit cells directly here when the schedule
 // changes. Styles live in app/globals.css under ".sched".
+// The download button serves public/images/schedule/trs-dsai-2026-schedule.png
+// — replace that image too whenever the schedule changes.
 
 const times = [
   "9:00–10:00", "10:00–11:00", "11:00–11:30", "11:30–12:15", "12:15–13:00",
@@ -19,6 +21,18 @@ function Sp({ name, org }: { name: string; org?: string }) {
 export default function ScheduleGrid() {
   return (
     <div>
+      <div className="flex justify-end mb-4">
+        <a
+          href="/images/schedule/trs-dsai-2026-schedule.png"
+          download="TRS-DSAI-2026-Schedule.png"
+          className="inline-flex items-center gap-2 bg-navy text-white px-5 py-3 text-[14px] font-semibold rounded-sm hover:bg-navy-deep transition-colors"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
+          </svg>
+          Download schedule (image)
+        </a>
+      </div>
       <div className="sched">
         <table>
           <thead>
