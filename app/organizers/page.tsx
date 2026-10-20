@@ -22,7 +22,7 @@ export default function OrganizersPage() {
             Organizers
           </h1>
           <p className="text-white/85 max-w-lg text-[15.5px]">
-            The {site.organizer}, with {site.partners.join(" and ")}, organize and run this
+            {site.organizer}, with {site.partners.join(" and ")}, organize and run this
             workshop end to end.
           </p>
         </div>
