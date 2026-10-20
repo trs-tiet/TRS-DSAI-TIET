@@ -43,7 +43,7 @@ export default function AboutPage() {
               academic-industry partnerships.
             </p>
             <p className="text-[17px] text-fg max-w-xl">
-              The event is organized by the {site.organizer}, in partnership with{" "}
+              The event is organized by {site.organizer}, in partnership with{" "}
               {site.partners.join(" and ")}, hosted at {site.venue.fullAddress}.
             </p>
           </Reveal>
