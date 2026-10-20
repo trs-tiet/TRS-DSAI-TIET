@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import { site } from "@/data/site";
-import { scheduleDays } from "@/data/schedule";
+import { scheduleThemes } from "@/data/schedule";
 import { allSpeakers } from "@/data/speakers";
 import { exhibitors } from "@/data/exhibitors";
 
@@ -125,25 +125,39 @@ export default function HomePage() {
       <section className="bg-paper py-28">
         <div className="wrap">
           <SectionHeading
-            title="Two days, four focuses"
-            subtitle="Each day brings two focus areas, with talks, hands-on sessions and exhibitions to match."
+            title="Two days, four themes"
+            subtitle="Each day brings two themes, with talks, hands-on sessions and exhibitions to match."
           />
         </div>
         <div className="wrap">
-          <div className="grid md:grid-cols-2 gap-px bg-line">
-            {scheduleDays.map((day, i) => (
-              <Reveal key={day.dayLabel} delay={i * 0.1}>
-                <div className="bg-surface p-10 md:p-12 min-h-[300px] flex flex-col justify-between h-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line">
+            {scheduleThemes.map((theme, i) => (
+              <Reveal key={theme.id || theme.topic} delay={i * 0.08}>
+                <div className="bg-surface p-7 sm:p-8 min-h-[280px] flex flex-col justify-between h-full hover:bg-paper/40 transition-colors">
                   <div>
-                    <div className="font-display text-[15px] text-crimson font-semibold mb-6">
-                      {day.dayLabel} — {day.date}
+                    <div className="font-display text-[14px] md:text-[15px] text-crimson font-semibold mb-5">
+                      {theme.dayLabel ? `${theme.dayLabel} — ${theme.date}` : theme.date}
                     </div>
-                    <h3 className="text-[26px] md:text-[28px] font-semibold max-w-xs mb-3.5">
-                      {day.theme}
+                    <h3 className="text-[21px] sm:text-[22px] md:text-[24px] font-semibold mb-3.5 leading-snug sm:min-h-[58px]">
+                      {theme.topic}
                     </h3>
                   </div>
-                  <div className="text-[13.5px] text-steel mt-6 border-t border-line pt-4.5">
-                    {day.room}
+                  <div className="text-[13.5px] text-steel mt-6 border-t border-line pt-4.5 space-y-1 sm:min-h-[64px]">
+                    {(() => {
+                      const lines = theme.venue.split(/(?:\r?\n|,\s*(?=Hands-[Oo]n))/);
+                      return (
+                        <>
+                          {lines.map((line, idx) => (
+                            <div key={idx}>{line.trim()}</div>
+                          ))}
+                          {lines.length === 1 && (
+                            <div className="invisible select-none hidden sm:block" aria-hidden="true">
+                              &nbsp;
+                            </div>
+                          )}
+                        </>
+                      );
+                    })()}
                   </div>
                 </div>
               </Reveal>
@@ -190,14 +204,22 @@ export default function HomePage() {
           />
         </div>
         <div className="wrap">
-          <div className="flex flex-wrap border-t border-white/15">
+          <div className="grid grid-cols-1 md:grid-cols-3 border-t border-white/15">
             {exhibitors.map((ex) => (
               <div
                 key={ex.name}
-                className="flex-1 min-w-[180px] p-6 border-r border-b border-white/15"
+                className="p-6 border-r border-b border-white/15 flex flex-col justify-between"
               >
-                <b className="font-display text-[16px] block mb-1.5">{ex.name}</b>
-                <span className="text-[12.5px] text-[#AEB6C4]">{ex.focus}</span>
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-[11px] font-bold text-crimson uppercase tracking-wide bg-crimson/15 px-2 py-0.5 rounded">
+                      {ex.sessionCode}
+                    </span>
+                    <span className="text-[11px] text-white/60 font-mono">LP-109</span>
+                  </div>
+                  <b className="font-display text-[17px] block mb-1 text-white">{ex.name}</b>
+                  <span className="text-[12.5px] text-[#AEB6C4] block leading-relaxed">{ex.focus}</span>
+                </div>
               </div>
             ))}
           </div>

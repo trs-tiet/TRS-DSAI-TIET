@@ -1,74 +1,82 @@
 // ---------------------------------------------------------------------------
-// INDUSTRIAL EXHIBITION / HANDS-ON SESSIONS
-// Order matches data/sponsors.ts (kept in sync by request). Descriptions are
-// high-level and based on each company's public product category — edit
-// freely with more specific/official copy if you have it.
+// INDUSTRIAL WORKSHOPS / HANDS-ON SESSIONS (LP-109)
+// The workshop features 3 dedicated hands-on masterclasses:
+// 1. MathWorks (HOS 1 - Day 1)
+// 2. Noraxon (HOS 2 - Day 2)
+// 3. Labellerr AI (HOS 3 - Day 2)
+// All Hands-on Sessions take place in Workshop Lab LP-109.
 // ---------------------------------------------------------------------------
 
 export type Exhibitor = {
   name: string;
+  sessionCode: string; // e.g. "HOS 1"
+  day: string;         // e.g. "Day 1 (Friday, 30 Oct 2026)"
+  timing: string;      // e.g. "14:00 – 18:00 (3–4 Hrs)"
+  venue: string;       // "LP-109, TIET Patiala"
+  instructor: string;  // e.g. "Dr. Pranav Lad & Mr. Rohit Bhattacharjee"
   focus: string;
   description: string;
-  logo?: string; // path in /public/images/logos/
+  keyTopics: string[];
+  logo: string;        // path in /public/images/logos/
   url?: string;
 };
 
 export const exhibitors: Exhibitor[] = [
   {
-    name: "Edutech",
-    focus: "Education Technology & Digital Learning Solutions",
-    description:
-      "Edutech designs and builds hands-on STEAM learning spaces, engineering labs, and technology-based learning solutions for schools, universities, and industry, with a presence across the Middle East and India (Edutech India). Their work spans lab design and fit-out, curriculum development, and edtech platforms for immersive and technology-driven learning. The session covers how their STEAM space and lab design approach supports hands-on technical education.",
-    logo: "/images/logos/edutech.jpg",
-    url: "https://www.edutech.com/",
-  },
-  {
     name: "MathWorks",
-    focus: "MATLAB and Simulink applications",
+    sessionCode: "HOS 1",
+    day: "Day 1 · Friday, 30 Oct 2026",
+    timing: "Afternoon Session (3–4 Hours)",
+    venue: "LP-109, TIET Patiala",
+    instructor: "Dr. Pranav Lad & Mr. Rohit Bhattacharjee",
+    focus: "MATLAB & Simulink for Robotics, Autonomous Systems & Controls",
     description:
-      "MathWorks makes MATLAB and Simulink, widely used platforms for numerical computing, algorithm development, and model-based design across engineering and robotics. The session will demonstrate how these tools apply to robotics workflows — from control system design through simulation to deployment on real hardware.",
+      "MathWorks develops MATLAB and Simulink, world-leading platforms for mathematical computing, simulation, and model-based design in robotics. This intensive masterclass provides practical training on modeling robotic manipulators, autonomous navigation algorithms, sensor fusion, and deploying control code to real-world embedded hardware.",
+    keyTopics: [
+      "Robotics System Toolbox & Simulink modeling",
+      "Autonomous trajectory generation & control",
+      "Hardware-in-the-loop (HIL) simulation",
+      "Automated C/C++ code generation for controllers",
+    ],
     logo: "/images/logos/mathworks.svg",
-  },
-  {
-    name: "Delsys",
-    focus: "Wearable EMG and human-robot interaction",
-    description:
-      "Delsys designs high-fidelity wearable EMG (electromyography) sensors used to measure muscle activity with research-grade precision. Their systems support biomechanics, rehabilitation science, and studies linking human muscle signals to robotic control. Expect a hands-on look at surface EMG acquisition and how it feeds into human-robot interaction research.",
-    logo: "/images/logos/delsys.svg",
-  },
-  {
-    name: "Qualysis",
-    focus: "Motion Capture Systems",
-    description:
-      "Pukhya provides advanced motion capture systems that track human and object movement with high spatial precision. Their technology is used in biomechanics, sports science, and robotics research that needs accurate 3D motion data. Expect a live demo of their motion capture setup and how the captured data is analyzed.",
-    logo: "/images/logos/pukhya.jpg",
-  },
-  {
-    name: "Vicon",
-    focus: "Optical motion capture systems",
-    description:
-      "Vicon is a long-established provider of optical motion capture technology, used across engineering, life sciences, and entertainment applications where precise 3D movement data matters. Their camera-based systems deliver sub-millimetre tracking accuracy for biomechanics, robotics, and animation research. The session covers how their motion capture pipeline goes from raw camera data to usable motion analysis.",
-    logo: "/images/logos/vicon.jpg",
+    url: "https://www.mathworks.com/",
   },
   {
     name: "Noraxon",
-    focus: "Biomechanics, EMG & human performance",
+    sessionCode: "HOS 2",
+    day: "Day 2 · Saturday, 31 Oct 2026",
+    timing: "Afternoon Session",
+    venue: "LP-109, TIET Patiala",
+    instructor: "Mr. Saurabh Joshi",
+    focus: "Biomechanics, Surface EMG & Human-Robot Interaction",
     description:
-      "Aerobe provides wearable sensor systems for biomechanics, EMG, and human performance analysis, used across clinical research, sports science, and ergonomics. Their tools measure how the body moves and generates force. The session covers how these measurements inform human-centered robotics research.",
-    logo: "/images/logos/aerobe.jpg",
-  },
-  {
-    name: "Nugenix",
-    focus: "Robotic manipulation, ROS & intelligent systems",
-    description:
-      "Nugenix Robotics works on robotic manipulation, ROS-based systems, and intelligent automation. Their session offers hands-on exposure to robotic arms and manipulation tasks built on the Robot Operating System (ROS) — a practical look at how manipulation pipelines come together.",
-    logo: "/images/logos/nugenix.svg",
+      "Noraxon produces research-grade hardware and software solutions for biomechanics, high-density surface electromyography (EMG), and motion capture analysis. This hands-on session demonstrates live acquisition of muscle activity, kinematic analysis of human movement, and how biological telemetry interfaces with rehabilitation robotics and assistive exoskeletons.",
+    keyTopics: [
+      "Wireless surface EMG signal capture & processing",
+      "Kinematic & kinetic motion analysis",
+      "Bio-signal integration with robotic controllers",
+      "Applications in rehabilitation & assistive robotics",
+    ],
+    logo: "/images/logos/noraxon.svg",
+    url: "https://www.noraxon.com/",
   },
   {
     name: "Labellerr AI",
-    focus: "Computer vision, AI data & model training",
+    sessionCode: "HOS 3",
+    day: "Day 2 · Saturday, 31 Oct 2026",
+    timing: "Afternoon Session",
+    venue: "LP-109, TIET Patiala",
+    instructor: "Mr. Puneet Jindal",
+    focus: "Computer Vision Data Pipelines & AI Model Training for Robotics",
     description:
-      "Labellerr AI builds tools for computer vision data annotation and AI model training pipelines, helping teams label, manage, and iterate on the datasets used to train vision models. The session walks through how quality data annotation supports robust computer vision systems for robotics.",
+      "Labellerr AI builds an automated training data pipeline platform that accelerates computer vision model development. In this interactive workshop, participants learn how to automate data annotation, curate high-fidelity datasets, and fine-tune computer vision models designed for robotic perception, object detection, and autonomous navigation.",
+    keyTopics: [
+      "Automated image & video annotation pipelines",
+      "Dataset curation & active learning workflows",
+      "Fine-tuning object detection models for robots",
+      "Model deployment and performance validation",
+    ],
     logo: "/images/logos/labellerr.svg",
+    url: "https://www.labellerr.com/",
   },
 ];

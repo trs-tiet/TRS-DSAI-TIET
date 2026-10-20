@@ -102,7 +102,7 @@ export default function ScheduleGrid() {
         </table>
       </div>
       <p className="text-[13px] text-steel mt-3">
-        HOS: Hands-on Sessions (LP-108) · PS: Poster Session
+        HOS: Hands-on Sessions (LP-109) · PS: Poster Session
         <span className="md:hidden"> · Scroll sideways to see the full day</span>
       </p>
     </div>

@@ -1,10 +1,47 @@
 // ---------------------------------------------------------------------------
 // DAY-WISE SCHEDULE / THEMES
-// Detailed session timing isn't finalized yet — each day instead supports an
-// optional `image` (a schedule graphic you'll add later). Once you drop a
-// file into /public/images/schedule/ and set `image` below, it replaces the
-// "to be announced" placeholder automatically — no other code changes.
+// Edit the 4 themes below to update the cards on the homepage.
+// You can change date, topic, and venue for each theme card directly here.
 // ---------------------------------------------------------------------------
+
+export type ScheduleTheme = {
+  id: string;
+  dayLabel?: string; // Optional: "Day 1", "Day 2", etc.
+  date: string;     // e.g. "30 October 2026"
+  topic: string;    // Theme / Topic title
+  venue: string;    // Room or Venue name
+};
+
+export const scheduleThemes: ScheduleTheme[] = [
+  {
+    id: "theme-1",
+    dayLabel: "Day 1",
+    date: "30 October 2026",
+    topic: "Autonomous Systems",
+    venue: "Auditorium, TIET Patiala",
+  },
+  {
+    id: "theme-2",
+    dayLabel: "Day 1",
+    date: "30 October 2026",
+    topic: "Robotics in Industry 4.0",
+    venue: "Lecture : Auditorium, TIET Patiala\nHands-On : LP-109, TIET Patiala",
+  },
+  {
+    id: "theme-3",
+    dayLabel: "Day 2",
+    date: "31 October 2026",
+    topic: "AI/ML in Robotics",
+    venue: "LP-108, TIET Patiala",
+  },
+  {
+    id: "theme-4",
+    dayLabel: "Day 2",
+    date: "31 October 2026",
+    topic: "Robotics in Healthcare",
+    venue: "Lecture : LP-108, TIET Patiala\nHands-On : LP-109, TIET Patiala",
+  },
+];
 
 export type ScheduleDay = {
   dayLabel: string;
@@ -30,3 +67,4 @@ export const scheduleDays: ScheduleDay[] = [
     // image: "/images/schedule/day2.jpg",
   },
 ];
+

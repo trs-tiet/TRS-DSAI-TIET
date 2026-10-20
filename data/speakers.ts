@@ -21,19 +21,13 @@ export type Speaker = {
 };
 
 export const speakers: Speaker[] = [
+  // ---------------- ROW 1 ----------------
   {
     name: "Prof. Tim Miller",
     affiliation: "Professor of Artificial Intelligence, University of Queensland | UQ-TIET Chair in Data Science",
     type: "Academic",
     photo: "/images/speakers/tim-miller.jpg",
     bio: "Professor of Artificial Intelligence at the University of Queensland and the TIET-UQ Chair in Data Science. His research combines machine learning, reinforcement learning, AI planning, interaction design, and cognitive science. He leads research on human-centred AI, explainable AI, human-AI collaboration, and decision support, with a focus on developing AI systems that enhance human decision-making.",
-  },
-  {
-    name: "Dr. Tirthankar Bandyopadhyay",
-    affiliation: "Principal Research Scientist, CSIRO, Brisbane, Australia",
-    type: "Academic",
-    photo: "/images/speakers/tirthankar-bandyopadhyay.jpg",
-    bio: "Principal Research Scientist and robotics researcher at CSIRO, Australia. His work focuses on robot-world interaction, mobile manipulation, autonomous navigation, and robotic mobility in complex environments. He has led projects involving climbing robots, modular field robots, autonomous vehicles, environmental monitoring, and legged robots, including research addressing robotics for search, rescue, inspection, and challenging outdoor environments.",
   },
   {
     name: "Prof. Ahmed Chemori",
@@ -56,6 +50,22 @@ export const speakers: Speaker[] = [
     photo: "/images/speakers/rajesh-kumar.jpg",
     bio: "Principal Scientist who leads Advanced Robotics and AI initiatives at Addverb. His work spans collaborative robots, humanoids, legged robotic platforms, haptics, robot intelligence, and human–robot interaction. A President's Gold Medalist with a PhD from IIT Delhi, he has worked across the robotics intelligence stack, from low-level control and signal processing to planning, learning, interaction, and autonomous robotic systems.",
   },
+  {
+    name: "Dr. Pranav Lad",
+    affiliation: "Senior Engineer, MathWorks",
+    type: "Industrial",
+    photo: "/images/speakers/pranav-lad.jpg",
+    bio: "Senior Engineer with MathWorks, working with engineering technologies including MATLAB and Simulink. His professional expertise includes mechanical engineering, dynamics and vibration analysis, modelling, and simulation. He has delivered technical workshops on robotics, UAVs, AI, and MATLAB/Simulink for academic and research audiences, helping engineers and researchers apply computational tools to complex engineering and robotics problems.",
+  },
+  {
+    name: "Dr. Madan Dabbeeru",
+    affiliation: "Founder & CEO, Eizen, USA and Bangalore",
+    type: "Industrial",
+    photo: "/images/speakers/madan-dabbeeru.jpg",
+    bio: "Founder and CEO of Eizen, an AI company developing systems that move from visual intelligence toward action intelligence. He holds a PhD in AI and has more than 15 years of experience in artificial intelligence. His research and professional interests include robotics, cognitive science, computer vision, medical imaging, reinforcement learning, and autonomous decision-making for intelligent systems.",
+  },
+
+  // ---------------- ROW 2 ----------------
   {
     name: "Prof. Ashish Dutta",
     affiliation: "Professor, IIT Kanpur",
@@ -92,53 +102,48 @@ export const speakers: Speaker[] = [
     bio: "Associate Professor in the Department of Engineering Design at IIT Madras and Director of the INSPIRELab. He specializes in medical robotics, robotic surgery, image-guided interventions, and minimally invasive surgical systems. His research experience includes MRI-guided robotic surgery, retinal procedures, surgical navigation, and robot-assisted healthcare. He previously conducted postdoctoral research at Johns Hopkins University and earned his PhD in Robotics Engineering from Worcester Polytechnic Institute.",
   },
   {
-    name: "Dr. Ekta Singla",
-    affiliation: "Director of School of Robotics (SoR) at NAMTECH · Secretary, The Robotics Society, India · Associate Professor, IIT Ropar",
-    type: "Academic",
-    photo: "/images/speakers/ekta-singla.jpg",
-    bio: "Director of School of Robotics at NAMTECH and Associate Professor at IIT Ropar. Her research spans modular and reconfigurable robotics, wearable exoskeletons, rehabilitation systems, and robotics for Industry 4.0. With more than two decades of robotics experience, she has led major research collaborations and projects and currently serves as Secretary of The Robotics Society, India.",
-  },
-  {
-    name: "Dr. Anubhav Dogra",
-    affiliation: "Senior Software Engineer – Integration & Controls, Humanoid, London",
-    type: "Industrial",
-    photo: "/images/speakers/anubhav-dogra.jpg",
-    bio: "Robotics engineer specializing in robotic systems, sensor processing, computer vision, and integration and controls for humanoid robots. He currently works with Humanoid in London, contributing to the development of wheeled and bipedal robotic platforms. Previously, he worked as a Research Fellow at the University of Warwick on medical robotics and autonomous manipulation systems, following a PhD in modular and reconfigurable robotics from IIT Ropar.",
-  },
-  {
-    name: "Dr. Pranav Lad",
-    affiliation: "Senior Engineer, MathWorks",
-    type: "Industrial",
-    photo: "/images/speakers/pranav-lad.jpg",
-    bio: "Senior Engineer with MathWorks, working with engineering technologies including MATLAB and Simulink. His professional expertise includes mechanical engineering, dynamics and vibration analysis, modelling, and simulation. He has delivered technical workshops on robotics, UAVs, AI, and MATLAB/Simulink for academic and research audiences, helping engineers and researchers apply computational tools to complex engineering and robotics problems.",
-  },
-  {
-    name: "Mr. Aditya Marathe",
-    affiliation: "CEO, Nugenix Robotics",
-    type: "Industrial",
-    photo: "/images/speakers/aditya-marathe.jpg",
-    bio: "CEO of Nugenix Robotics, an organization working with robotic manipulators, mobile robots, and robotics platforms for education and research. His work includes robotics demonstrations, application development, and deployment of robotic arms and mobile manipulation systems. Nugenix's technology ecosystem covers areas including Industry 4.0, AI, defence robotics, agricultural robotics, rehabilitation, disaster response, and advanced manufacturing.",
-  },
-  {
-    name: "Mr. Puneet Jindal",
-    affiliation: "Founder & CEO, Labellerr AI",
-    type: "Industrial",
-    photo: "/images/speakers/puneet-jindal.jpg",
-    bio: "Founder and CEO of Labellerr AI, an AI technology company focused on data preparation and computer-vision workflows. He brings more than a decade of experience in data science and has previously led data science teams at organizations including Walmart, Delhivery, and RateGain. His technical expertise includes computer vision, NLP, LLMs, data pipelines, and scalable AI model development.",
-  },
-  {
-    name: "Dr. Madan Dabbeeru",
-    affiliation: "Founder & CEO, Eizen",
-    type: "Industrial",
-    photo: "/images/speakers/madan-dabbeeru.jpg",
-    bio: "Founder and CEO of Eizen, an AI company developing systems that move from visual intelligence toward action intelligence. He holds a PhD in AI and has more than 15 years of experience in artificial intelligence. His research and professional interests include robotics, cognitive science, computer vision, medical imaging, reinforcement learning, and autonomous decision-making for intelligent systems.",
-  },
-  {
     name: "Prof. Santhakumar Mohan",
     affiliation: "Professor, IIT Palakkad",
     type: "Academic",
     photo: "/images/speakers/santhakumar-mohan.jpg",
     bio: "Professor of Mechanical Engineering at IIT Palakkad specializing in robotics and motion control. His research includes mechanism design, service and field robots, underwater vehicles, manipulators, nonlinear motion control, medical assistive devices, and rehabilitation robotics. He has also worked extensively on mobile robots, autonomous vehicles, agricultural robots, exoskeletons, and underwater robotic systems through multidisciplinary research projects.",
+  },
+
+  // ---------------- ROW 3 ----------------
+  {
+    name: "Dr. Ekta Singla",
+    affiliation: "Director, SOR, NAMTECH · Secretary, TRS · Associate Professor, IIT Ropar",
+    type: "Academic",
+    photo: "/images/speakers/ekta-singla.jpg",
+    bio: "Director of School of Robotics (SoR) at NAMTECH and Associate Professor at IIT Ropar. Her research spans modular and reconfigurable robotics, wearable exoskeletons, rehabilitation systems, and robotics for Industry 4.0. With more than two decades of robotics experience, she has led major research collaborations and projects and currently serves as Secretary of The Robotics Society, India.",
+  },
+  {
+    name: "Dr. Anubhav Dogra",
+    affiliation: "Senior Robotics Engineer, Humanoid, London",
+    type: "Industrial",
+    photo: "/images/speakers/anubhav-dogra.jpg",
+    bio: "Robotics engineer specializing in robotic systems, sensor processing, computer vision, and integration and controls for humanoid robots. He currently works with Humanoid in London, contributing to the development of wheeled and bipedal robotic platforms. Previously, he worked as a Research Fellow at the University of Warwick on medical robotics and autonomous manipulation systems, following a PhD in modular and reconfigurable robotics from IIT Ropar.",
+  },
+  {
+    name: "Mr. Muralikrishnan E",
+    affiliation: "Head, Edutech Future Mobility Labs",
+    type: "Industrial",
+    photo: "/images/speakers/muralikrishnan-e.jpg",
+    bio: "Head – Edutech Future Mobility Labs at Edutech India Pvt. Ltd. He leads initiatives in autonomous mobility, ADAS, electric vehicles, software-defined vehicles, and intelligent robotic systems. His areas of interest include autonomous ground and aerial platforms, sensor fusion, perception, localization, path planning, control, ROS 2/Autoware, and Physical AI. He works with academic institutions, research organisations, and industry to develop future-mobility laboratories, research platforms, training programmes, and application-oriented technology projects. He holds an M.S. in Telecommunications Engineering from Victoria University, Melbourne, and a B.E. in Electronics and Communication Engineering from the University of Madras.",
+  },
+  {
+    name: "Mr. Saurabh Joshi",
+    affiliation: "Regional Account Manager, Noraxon",
+    type: "Industrial",
+    photo: "/images/speakers/saurabh-joshi.jpg",
+    bio: "Regional Account Manager at Noraxon USA Inc., supporting researchers and institutions across India. With around 14 years of experience in scientific measurement technologies and laboratory solutions, he brings expertise in technical support, product training, biomechanics, and rehabilitation equipment. He works closely with academic, clinical, and industry teams to help institutions plan laboratories, assess equipment requirements, and make effective use of measurement technologies. He holds an MBA in Analytics and Business Development.",
+  },
+  {
+    name: "Mr. Puneet Jindal",
+    affiliation: "CEO, Labellerr AI and Robotics Data",
+    type: "Industrial",
+    photo: "/images/speakers/puneet-jindal.jpg",
+    bio: "Founder and CEO of Labellerr AI, an AI technology company focused on data preparation and computer-vision workflows. He brings more than a decade of experience in data science and has previously led data science teams at organizations including Walmart, Delhivery, and RateGain. His technical expertise includes computer vision, NLP, LLMs, data pipelines, and scalable AI model development.",
   },
   {
     name: "Prof. V. Hari Kumar",
