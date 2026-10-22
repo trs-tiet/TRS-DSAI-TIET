@@ -20,6 +20,7 @@ const flatLinks = [
 ];
 
 const moreChildren = [
+  { href: "/campus-map", label: "Campus Map" },
   { href: "/places-to-visit/thapar", label: "Places to Visit — In Thapar" },
   { href: "/places-to-visit/patiala", label: "Places to Visit — In Patiala" },
   { href: "/gallery", label: "Gallery" },

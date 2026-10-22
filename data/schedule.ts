@@ -15,28 +15,24 @@ export type ScheduleTheme = {
 export const scheduleThemes: ScheduleTheme[] = [
   {
     id: "theme-1",
-    dayLabel: "Day 1",
     date: "30 October 2026",
     topic: "Autonomous Systems",
     venue: "Auditorium, TIET Patiala",
   },
   {
     id: "theme-2",
-    dayLabel: "Day 1",
     date: "30 October 2026",
     topic: "Robotics in Industry 4.0",
     venue: "Lecture : Auditorium, TIET Patiala\nHands-On : LP-109, TIET Patiala",
   },
   {
     id: "theme-3",
-    dayLabel: "Day 2",
     date: "31 October 2026",
     topic: "AI/ML in Robotics",
     venue: "LP-108, TIET Patiala",
   },
   {
     id: "theme-4",
-    dayLabel: "Day 2",
     date: "31 October 2026",
     topic: "Robotics in Healthcare",
     venue: "Lecture : LP-108, TIET Patiala\nHands-On : LP-109, TIET Patiala",

@@ -16,28 +16,33 @@ export const placesInThapar: PlaceToVisit[] = [
     description:
       "Home base of TIET's Mechatronics and Robotics Society (MARS) — the student robotics team behind the institute's rover and drone projects.",
     mapsUrl: "https://maps.app.goo.gl/h2nXnV185jSA45hR8",
+    photo: "/images/places/mars-lab.jpg",
   },
   {
     name: "Gait Lab, D-Block",
     description:
       "A biomechanics and gait analysis lab on campus — relevant context given the workshop's own EMG and motion-capture exhibitors.",
     mapsUrl: "https://maps.app.goo.gl/NZFAcHgf1b51VSpc6",
+    photo: "/images/places/gait-lab.jpg",
   },
   {
     name: "CSED Block",
     description: "The Computer Science & Engineering Department building.",
     mapsUrl: "https://maps.app.goo.gl/gmCPoZVeXy57aSHY8",
+    photo: "/images/places/csed-block.jpg",
   },
   {
     name: "Nava Nalanda Library",
     description:
       "TIET's main library — a good stop between sessions for a quiet corner or a look at the campus's academic resources.",
     mapsUrl: "https://maps.app.goo.gl/WuB6zqqhXPeXEzAK6",
+    photo: "/images/places/nava-nalanda-library.jpg",
   },
   {
     name: "Robotics and Intelligent System Lab, L-006, CSED Building",
     description:
       "A robotics and intelligent systems research lab housed in the CSED building, room L-006.",
     mapsUrl: "https://maps.app.goo.gl/gmCPoZVeXy57aSHY8",
+    photo: "/images/places/ris-lab.jpg",
   },
 ];

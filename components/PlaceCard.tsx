@@ -6,7 +6,13 @@ export default function PlaceCard({ place }: { place: PlaceToVisit }) {
     <div className="bg-surface border border-line grid sm:grid-cols-[220px_1fr] gap-0">
       <div className="relative aspect-[4/3] sm:aspect-auto bg-paper">
         {place.photo ? (
-          <Image src={place.photo} alt={place.name} fill className="object-cover" />
+          <Image
+            src={place.photo}
+            alt={place.name}
+            fill
+            sizes="(min-width: 640px) 220px, 100vw"
+            className="object-cover"
+          />
         ) : (
           <div className="h-full w-full flex items-center justify-center text-[11px] text-steel">
             Photo coming soon

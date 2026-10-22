@@ -6,7 +6,8 @@
 
 export type Organizer = {
   name: string;
-  role: string;
+  role?: string;
+  affiliation?: string;
   photo?: string;
   bio?: string;
 };
@@ -41,5 +42,59 @@ export const organizers: Organizer[] = [
     role: "Co-Convener · Associate Professor, TIET Patiala",
     photo: "/images/organizers/sachin-kansal.jpg",
     bio: "Associate Professor in the Department of Computer Science and Engineering at TIET, specializing in robotics, computer vision, and mechatronics. He earned his PhD from IIT Delhi and has contributed extensively to research in advanced automation, human–robot interaction, and AI-driven systems. He has authored numerous research publications and participated in government-funded research and innovation projects.",
+  },
+];
+
+export const supportingTeam: Organizer[] = [
+  {
+    name: "Prof. Dheeraj Gupta",
+    role: "Travel and Liaison",
+    affiliation: "MED, TIET Patiala",
+    photo: "/images/organizers/dheeraj-gupta.jpg",
+  },
+  {
+    name: "Prof. Anju Bala",
+    role: "Local Advisory",
+    affiliation: "CSED, TIET Patiala",
+    photo: "/images/organizers/anju-bala.jpg",
+  },
+  {
+    name: "Dr. Subhash Pratap",
+    role: "Media & Publicity",
+    affiliation: "MED, TIET Patiala",
+    photo: "/images/organizers/subhash-pratap.jpg",
+  },
+];
+
+export const coreTeam: Organizer[] = [
+  {
+    name: "Mr. Shavinder Singh",
+    affiliation: "MED, TIET Patiala",
+    photo: "/images/organizers/shavinder-singh.jpg",
+  },
+  {
+    name: "Mr. Anikait Kaushik",
+    affiliation: "MED, TIET Patiala",
+    photo: "/images/organizers/anikait-kaushik.jpg",
+  },
+  {
+    name: "Mr. Keshav Chhabra",
+    affiliation: "MED, TIET Patiala",
+    photo: "/images/organizers/keshav-chhabra.jpg",
+  },
+  {
+    name: "Mr. Shreyas Patel",
+    affiliation: "MED, IIT Ropar",
+    photo: "/images/organizers/shreyas-patel.jpg",
+  },
+  {
+    name: "Ms. Sakshi Dhiman",
+    affiliation: "CSED, TIET Patiala",
+    photo: "/images/organizers/sakshi-dhiman.jpg",
+  },
+  {
+    name: "Ms. Diya Jain",
+    affiliation: "CSED, TIET Patiala",
+    photo: "/images/organizers/diya-jain.jpg",
   },
 ];

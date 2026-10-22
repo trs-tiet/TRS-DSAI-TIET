@@ -34,7 +34,7 @@ export const sponsors: Sponsor[] = [
     focus: "MATLAB and Simulink applications",
     description:
       "MathWorks makes MATLAB and Simulink, widely used platforms for numerical computing, algorithm development, and model-based design across engineering and robotics. The session will demonstrate how these tools apply to robotics workflows — from control system design through simulation to deployment on real hardware.",
-    logo: "/images/logos/mathworks.svg",
+    logo: "/images/logos/mathworks.jpeg",
   },
   {
     name: "Delsys",

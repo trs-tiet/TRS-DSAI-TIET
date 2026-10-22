@@ -2,8 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/data/site";
 
-const PORTFOLIO_URL = "https://pd-dev.vercel.app/";
-
 export default function Footer() {
   return (
     <footer className="bg-ink text-[#B7BAC0] py-14 text-[13.5px]">
@@ -33,6 +31,7 @@ export default function Footer() {
               <Link href="/sponsors">Sponsors</Link>
               <Link href="/hands-on-experience">Hands-on Experience</Link>
               <Link href="/accommodation">Accommodation &amp; Travel</Link>
+              <Link href="/campus-map">Campus Map</Link>
               <Link href="/places-to-visit/patiala">Places to Visit</Link>
               <Link href="/gallery">Gallery</Link>
               <Link href="/faq">FAQ</Link>
@@ -73,16 +72,8 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="flex justify-between flex-wrap gap-3 text-[12px]">
-            <a
-              href={PORTFOLIO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              Designed by Pranjay Dhawan
-            </a>
-            <div>Organized by The Robotics Society &amp; COE|DSAI, TIET</div>
+          <div className="text-[12px]">
+            Organized by The Robotics Society &amp; COE|DSAI, TIET
           </div>
         </div>
       </div>

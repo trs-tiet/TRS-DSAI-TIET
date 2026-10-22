@@ -136,7 +136,7 @@ export default function HomePage() {
                 <div className="bg-surface p-7 sm:p-8 min-h-[280px] flex flex-col justify-between h-full hover:bg-paper/40 transition-colors">
                   <div>
                     <div className="font-display text-[14px] md:text-[15px] text-crimson font-semibold mb-5">
-                      {theme.dayLabel ? `${theme.dayLabel} — ${theme.date}` : theme.date}
+                      {theme.date}
                     </div>
                     <h3 className="text-[21px] sm:text-[22px] md:text-[24px] font-semibold mb-3.5 leading-snug sm:min-h-[58px]">
                       {theme.topic}
@@ -208,15 +208,25 @@ export default function HomePage() {
             {exhibitors.map((ex) => (
               <div
                 key={ex.name}
-                className="p-6 border-r border-b border-white/15 flex flex-col justify-between"
+                className="p-6 border-r border-b border-white/15 flex flex-col justify-between hover:bg-white/[0.03] transition-colors"
               >
                 <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
+                  <div className="flex items-center justify-between gap-2 mb-3">
                     <span className="text-[11px] font-bold text-crimson uppercase tracking-wide bg-crimson/15 px-2 py-0.5 rounded">
                       {ex.sessionCode}
                     </span>
                     <span className="text-[11px] text-white/60 font-mono">LP-109</span>
                   </div>
+                  {ex.logo && (
+                    <div className="h-14 bg-white rounded p-2 mb-3.5 flex items-center justify-center">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={ex.logo}
+                        alt={`${ex.name} logo`}
+                        className="max-h-9 max-w-[150px] object-contain"
+                      />
+                    </div>
+                  )}
                   <b className="font-display text-[17px] block mb-1 text-white">{ex.name}</b>
                   <span className="text-[12.5px] text-[#AEB6C4] block leading-relaxed">{ex.focus}</span>
                 </div>

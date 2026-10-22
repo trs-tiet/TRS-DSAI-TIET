@@ -38,7 +38,7 @@ export const exhibitors: Exhibitor[] = [
       "Hardware-in-the-loop (HIL) simulation",
       "Automated C/C++ code generation for controllers",
     ],
-    logo: "/images/logos/mathworks.svg",
+    logo: "/images/logos/mathworks.jpeg",
     url: "https://www.mathworks.com/",
   },
   {
@@ -57,7 +57,7 @@ export const exhibitors: Exhibitor[] = [
       "Bio-signal integration with robotic controllers",
       "Applications in rehabilitation & assistive robotics",
     ],
-    logo: "/images/logos/noraxon.svg",
+    logo: "/images/logos/aerobe.jpg",
     url: "https://www.noraxon.com/",
   },
   {

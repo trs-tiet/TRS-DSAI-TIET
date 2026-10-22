@@ -66,7 +66,7 @@ export default function ScheduleGrid() {
             </tr>
             <tr>
               <td className="hos">PS1</td>
-              <td className="hos" colSpan={2}>HOS 1: MathWorks (3–4 hrs)<br />Dr. Pranav Lad &amp; team</td>
+              <td className="hos" colSpan={2}>HOS 1: MathWorks (3–4 hrs)<br />Dr. Pranav Lad &amp; Mr. Rohit Bhattacharjee</td>
             </tr>
             <tr className="sep"><td colSpan={13} /></tr>
 

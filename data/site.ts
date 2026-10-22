@@ -27,12 +27,12 @@ export const site = {
 
   stats: [
     { value: "100+", label: "Participants" },
-    { value: "18+", label: "Invited speakers" },
+    { value: "19+", label: "Invited speakers" },
     { value: "10+", label: "Industry exhibitions" },
   ],
 
   // Shown on the home hero and the "Register now" band. Set to "" to hide.
-  registrationNotice: "Registration extended till 15th October, 2026",
+  registrationNotice: "Registration extended till 25th October, 2026",
 
   registerUrl: "https://forms.gle/TSQrcXzT1wstKEob9",
   brochureUrl: "/docs/trs-dsai-brochure.pdf",

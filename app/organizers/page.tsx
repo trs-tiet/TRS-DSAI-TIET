@@ -3,7 +3,7 @@ import VideoBackground from "@/components/VideoBackground";
 import Reveal from "@/components/Reveal";
 import OrganizerCard from "@/components/OrganizerCard";
 import CTASection from "@/components/CTASection";
-import { organizers } from "@/data/organizers";
+import { organizers, supportingTeam, coreTeam } from "@/data/organizers";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -28,18 +28,51 @@ export default function OrganizersPage() {
         </div>
       </section>
 
-      <section className="bg-surface py-20">
+      <section className="bg-surface py-12">
         <div className="wrap">
-          <Reveal>
-            <h2 className="font-display font-semibold text-[22px] mb-2">Organizing committee</h2>
-            <p className="text-steel text-[14px] mb-8">Click a card for a fuller bio.</p>
-          </Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {organizers.map((o, i) => (
-              <Reveal key={o.name} delay={i * 0.06} className="h-full">
-                <OrganizerCard organizer={o} />
-              </Reveal>
-            ))}
+          {/* Organizing Committee */}
+          <div>
+            <Reveal className="text-center mb-6">
+              <h2 className="font-display font-semibold text-[24px] mb-1.5">Organizing committee</h2>
+              <p className="text-steel text-[14px]">Click a card for a fuller bio.</p>
+            </Reveal>
+            <div className="flex flex-wrap justify-center gap-6">
+              {organizers.map((o, i) => (
+                <Reveal key={o.name} delay={i * 0.05} className="w-[calc(50%-12px)] sm:w-[200px] max-w-[200px] flex-none">
+                  <OrganizerCard organizer={o} />
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          {/* Supporting Team */}
+          <div className="mt-10 pt-8 border-t border-line">
+            <Reveal className="text-center mb-6">
+              <h2 className="font-display font-semibold text-[24px] mb-1.5">Supporting team</h2>
+              <p className="text-steel text-[14px]">Faculty coordinators and advisory members.</p>
+            </Reveal>
+            <div className="flex flex-wrap justify-center gap-6">
+              {supportingTeam.map((o, i) => (
+                <Reveal key={o.name} delay={i * 0.05} className="w-[calc(50%-12px)] sm:w-[200px] max-w-[200px] flex-none">
+                  <OrganizerCard organizer={o} />
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          {/* Core Team */}
+          <div className="mt-10 pt-8 border-t border-line">
+            <Reveal className="text-center mb-6">
+              <h2 className="font-display font-semibold text-[24px] mb-1.5">Core team</h2>
+              <p className="text-steel text-[14px]">Student and research coordinators driving the workshop execution.</p>
+            </Reveal>
+            <div className="flex flex-wrap justify-center gap-6 max-w-[680px] mx-auto">
+              {coreTeam.map((o, i) => (
+                <Reveal key={o.name} delay={i * 0.05} className="w-[calc(50%-12px)] sm:w-[200px] max-w-[200px] flex-none">
+                  <OrganizerCard organizer={o} />
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>

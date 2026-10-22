@@ -152,6 +152,13 @@ export const speakers: Speaker[] = [
     photo: "/images/speakers/v-hari-kumar.jpg",
     bio: "Faculty member at NIT Warangal whose research spans shape and topology optimization, isogeometric analysis, finite-element methods, geometric modelling, CAD, and robotics. His robotics research includes kinematics, path planning, mobile-robot coverage planning, and industrial robot applications. He also works on AI for engineering design and has contributed to research on optimization-driven robotic systems.",
   },
+  {
+    name: "Mr. Rohit Ranjan Bhattacharjee",
+    affiliation: "Customer Success Engineer, Education Team, MathWorks",
+    type: "Industrial",
+    photo: "/images/speakers/rohit-bhattacharjee.jpg",
+    bio: "Customer Success Engineer with the Education Team at MathWorks, India. He is completing his PhD in Aerospace Engineering at IIT Madras, where his research focuses on flow analysis in gas turbine engines using advanced image-processing techniques. With over seven years of academic research experience, he has published several papers in reputed journals, including one that received the Distinguished Paper Award from the Proceedings of the Combustion Institute. He also holds a research-based Master's degree from the University of Ottawa and a Bachelor's degree in Aerospace Engineering from Carleton University, Canada.",
+  },
 ];
 
 export const academicSpeakers: Speaker[] = speakers.filter((s) => s.type === "Academic");

@@ -7,7 +7,7 @@
 import { speakers } from "./speakers";
 import { exhibitors } from "./exhibitors";
 import { faqs } from "./faq";
-import { organizers } from "./organizers";
+import { organizers, supportingTeam, coreTeam } from "./organizers";
 import { placesInPatiala } from "./places-patiala";
 import { placesInThapar } from "./places-thapar";
 
@@ -27,6 +27,7 @@ const pages: SearchItem[] = [
   { title: "Sponsors", category: "Page", href: "/sponsors" },
   { title: "Hands-on Experience", category: "Page", href: "/hands-on-experience" },
   { title: "Accommodation & Travel", category: "Page", href: "/accommodation" },
+  { title: "Campus Map", category: "Page", href: "/campus-map", description: "Interactive TIET Patiala campus map showing LP-108, LP-109, Auditorium, and landmarks." },
   { title: "Places to Visit — In Thapar", category: "Page", href: "/places-to-visit/thapar" },
   { title: "Places to Visit — In Patiala", category: "Page", href: "/places-to-visit/patiala" },
   { title: "Gallery", category: "Page", href: "/gallery" },
@@ -48,12 +49,26 @@ const exhibitorItems: SearchItem[] = exhibitors.map((e) => ({
   description: e.focus,
 }));
 
-const organizerItems: SearchItem[] = organizers.map((o) => ({
-  title: o.name,
-  category: "Organizer",
-  href: "/organizers",
-  description: o.role,
-}));
+const organizerItems: SearchItem[] = [
+  ...organizers.map((o) => ({
+    title: o.name,
+    category: "Organizer",
+    href: "/organizers",
+    description: o.role,
+  })),
+  ...supportingTeam.map((o) => ({
+    title: o.name,
+    category: "Supporting Team",
+    href: "/organizers",
+    description: o.role ? `${o.role} · ${o.affiliation}` : o.affiliation,
+  })),
+  ...coreTeam.map((o) => ({
+    title: o.name,
+    category: "Core Team",
+    href: "/organizers",
+    description: o.affiliation,
+  })),
+];
 
 const placeItems: SearchItem[] = [
   ...placesInThapar.map((p) => ({
