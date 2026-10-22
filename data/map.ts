@@ -30,7 +30,7 @@ export const campusLocations: MapLocation[] = [
     category: "Workshop Venues",
     highlight: "Primary Workshop Venue · LP-108 (Technical Sessions) & LP-109 (Hands-on Masterclasses)",
     description:
-      "Main academic hub for TRS-DSAI 2026. Contains LP-108 (Keynote Lectures, Paper Presentations, Valedictory), LP-109 (MathWorks, Noraxon, and Labellerr AI masterclasses), and LT lecture theatres.",
+      "Main academic hub for TRS-DSAI 2026. Contains LP-108 (Keynote Lectures and Valedictory), LP-109 (MathWorks, Noraxon, and Labellerr AI masterclasses), and LT lecture theatres.",
     tag: "LP-108 · LP-109 · LT",
     landmarksNear: "Central academic core, beside Nava Nalanda Library",
   },
