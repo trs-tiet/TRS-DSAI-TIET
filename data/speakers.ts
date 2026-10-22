@@ -37,7 +37,7 @@ export const speakers: Speaker[] = [
     bio: "Senior CNRS researcher in automatic control and robotics at LIRMM, University of Montpellier. His research focuses on nonlinear, adaptive, robust, and predictive control of complex robotic systems. His expertise spans parallel robots, marine robotics, humanoid robots, exoskeletons, and underactuated systems, with extensive contributions to international research, publications, supervision, and robotics-control education.",
   },
   {
-    name: "Dr. Alok Mukherjee",
+    name: "Shri Alok Mukherjee",
     affiliation: "TRS President · CEO, i4Marine Technologies | Former DRDO Scientist",
     type: "Industrial",
     photo: "/images/speakers/alok-mukherjee.jpg",
@@ -95,7 +95,7 @@ export const speakers: Speaker[] = [
     bio: "Professor in the Department of Applied Mechanics at IIT Delhi and works extensively in soft robotics and biomechanics. His research interests include soft actuators and sensors, biomechanics, bio-inspired engineering, smart structures, and AI-enabled healthcare technologies. He leads interdisciplinary research connecting mechanics, robotics, and human-centred systems, with applications in wearable robotics, rehabilitation, and assistive technologies.",
   },
   {
-    name: "Dr. Nirav Patel",
+    name: "Prof. Nirav Patel",
     affiliation: "Associate Professor, IIT Madras",
     type: "Academic",
     photo: "/images/speakers/nirav-patel.jpg",
@@ -111,7 +111,7 @@ export const speakers: Speaker[] = [
 
   // ---------------- ROW 3 ----------------
   {
-    name: "Dr. Ekta Singla",
+    name: "Prof. Ekta Singla",
     affiliation: "Director, SOR, NAMTECH · Secretary, TRS · Associate Professor, IIT Ropar",
     type: "Academic",
     photo: "/images/speakers/ekta-singla.jpg",
