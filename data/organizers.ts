@@ -47,10 +47,10 @@ export const organizers: Organizer[] = [
 
 export const supportingTeam: Organizer[] = [
   {
-    name: "Prof. Dheeraj Gupta",
-    role: "Travel and Liaison",
+    name: "Dr. Subhash Pratap",
+    role: "Media & Publicity",
     affiliation: "MED, TIET Patiala",
-    photo: "/images/organizers/dheeraj-gupta.jpg",
+    photo: "/images/organizers/subhash-pratap.jpg",
   },
   {
     name: "Prof. Anju Bala",
@@ -59,10 +59,10 @@ export const supportingTeam: Organizer[] = [
     photo: "/images/organizers/anju-bala.jpg",
   },
   {
-    name: "Dr. Subhash Pratap",
-    role: "Media & Publicity",
+    name: "Prof. Dheeraj Gupta",
+    role: "Event Management",
     affiliation: "MED, TIET Patiala",
-    photo: "/images/organizers/subhash-pratap.jpg",
+    photo: "/images/organizers/dheeraj-gupta.jpg",
   },
 ];
 

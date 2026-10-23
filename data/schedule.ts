@@ -16,14 +16,14 @@ export const scheduleThemes: ScheduleTheme[] = [
   {
     id: "theme-1",
     date: "30 October 2026",
-    topic: "Autonomous Systems",
+    topic: "Intelligent Systems",
     venue: "Auditorium, TIET Patiala",
   },
   {
     id: "theme-2",
     date: "30 October 2026",
     topic: "Robotics in Industry 4.0",
-    venue: "Lecture : Auditorium, TIET Patiala\nHands-On : LP-109, TIET Patiala",
+    venue: "Lecture : LP-108, TIET Patiala\nHands-On : LP-109, TIET Patiala",
   },
   {
     id: "theme-3",
@@ -51,15 +51,15 @@ export const scheduleDays: ScheduleDay[] = [
   {
     dayLabel: "Day 1",
     date: "30 October 2026",
-    theme: "Autonomous Systems · Robotics in Industry 4.0",
-    room: "Auditorium & LP-109, TIET Patiala",
+    theme: "Intelligent Systems · Robotics in Industry 4.0",
+    room: "Auditorium & LP-108 / LP-109, TIET Patiala",
     // image: "/images/schedule/day1.jpg",
   },
   {
     dayLabel: "Day 2",
     date: "31 October 2026",
     theme: "AI/ML in Robotics · Robotics in Healthcare",
-    room: "LP-109, TIET Patiala",
+    room: "LP-108 & LP-109, TIET Patiala",
     // image: "/images/schedule/day2.jpg",
   },
 ];

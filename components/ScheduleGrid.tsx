@@ -47,9 +47,9 @@ export default function ScheduleGrid() {
             {/* ---------------- DAY 1 ---------------- */}
             <tr>
               <td className="day" rowSpan={3}><small>Day 1</small>Oct 30</td>
-              <td className="tk" colSpan={5}>Autonomous Systems (Auditorium)</td>
+              <td className="tk" colSpan={5}>Intelligent Systems (Auditorium)</td>
               <td className="br" rowSpan={3}>Lunch Break</td>
-              <td className="tk" colSpan={6}>Robotics in Industry 4.0 (LP-109)</td>
+              <td className="tk" colSpan={6}>Robotics in Industry 4.0 (LP-108)</td>
             </tr>
             <tr>
               <td className="cer" rowSpan={2}>Inaugural Session</td>
@@ -73,9 +73,9 @@ export default function ScheduleGrid() {
             {/* ---------------- DAY 2 ---------------- */}
             <tr>
               <td className="day" rowSpan={4}><small>Day 2</small>Oct 31</td>
-              <td className="tk" colSpan={5}>AI/ML in Robotics (LP-109)</td>
+              <td className="tk" colSpan={5}>AI/ML in Robotics (LP-108)</td>
               <td className="br" rowSpan={4}>Lunch Break</td>
-              <td className="tk" colSpan={6}>Robotics in Healthcare (LP-109)</td>
+              <td className="tk" colSpan={6}>Robotics in Healthcare (LP-108)</td>
             </tr>
             <tr>
               <td className="sp" rowSpan={3}><Sp name="Prof. Tim Miller" org="UQ, AUS" /></td>

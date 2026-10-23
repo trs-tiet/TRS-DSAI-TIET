@@ -170,7 +170,7 @@ export default function HomePage() {
       <section className="bg-surface py-28">
         <div className="wrap">
           <SectionHeading
-            title="Speakers joining this year"
+            title="List of speakers"
             subtitle="A mix of academic researchers and industry practitioners."
           />
           <div className="border-t border-line">

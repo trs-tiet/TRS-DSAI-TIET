@@ -30,7 +30,7 @@ const scheduleData: Record<string, ScheduleItem> = {
     title: "Day 1 Schedule: Intelligent Systems & Industry 4.0",
     badge: "Day 1 · Friday, Oct 30",
     date: "October 30, 2026",
-    description: "Inaugural session, Autonomous Systems keynote & talks, Robotics in Industry 4.0, MathWorks hands-on workshop in LP-109, and TRS GBM.",
+    description: "Inaugural session, Intelligent Systems keynote & talks, Robotics in Industry 4.0, MathWorks hands-on workshop in LP-109, and TRS GBM.",
     venues: ["Auditorium", "LP-108", "LP-109"],
     imageSrc: "/images/schedule/day1_schedule.png",
     downloadPngName: "TRS-DSAI-2026-Day1-Schedule.png",
@@ -260,7 +260,7 @@ export default function ScheduleViewer() {
                   </span>
                 </div>
                 <h3 className="font-display font-bold text-[20px] text-navy">
-                  Autonomous Systems &amp; Industry 4.0
+                  Intelligent Systems &amp; Industry 4.0
                 </h3>
                 <p className="text-[13px] text-steel mt-1 line-clamp-2">
                   Inauguration, 4 technical lectures, MathWorks Hands-on Session (3–4 hrs in LP-109), and TRS General Body Meeting.
@@ -429,7 +429,7 @@ export default function ScheduleViewer() {
               🏛️ Main Auditorium
             </div>
             <p className="text-[13px] text-steel">
-              Inaugural Ceremony, Autonomous Systems plenary keynotes, and general conference assemblies.
+              Inaugural Ceremony, Intelligent Systems plenary keynotes, and general conference assemblies.
             </p>
           </div>
           <div className="p-4 rounded-lg bg-paper border border-steel/15">
