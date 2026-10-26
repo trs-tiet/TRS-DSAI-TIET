@@ -161,10 +161,10 @@ export const speakers: Speaker[] = [
   },
   {
     name: "Mr. Aditya Marathe",
-    affiliation: "Nugenix Robotics",
+    affiliation: "Founder & CEO, Nugenix Robotics",
     type: "Industrial",
     photo: "/images/speakers/aditya-marathe.jpg",
-    bio: "Speaker at the TRS-DSAI 2026 International Workshop representing Nugenix. Specializes in robotic manipulation, ROS-based autonomous platforms, and intelligent automation technologies with hands-on applications across industrial robotics and healthcare systems.",
+    bio: "Founder and CEO of Nugenix Robotics, an enterprise specializing in advanced robotics research, intelligent automation platforms, and robotic manipulation systems. His technical expertise spans the Robot Operating System (ROS & ROS 2), multi-axis collaborative robotic arms, autonomous motion planning, and sensor integration. As an industry practitioner and resource person across premier engineering institutions in India, he leads technology development and hands-on workshops in collaborative robotics, assistive healthcare applications, and real-world industrial automation.",
   },
 ];
 

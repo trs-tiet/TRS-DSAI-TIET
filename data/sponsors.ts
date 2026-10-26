@@ -86,6 +86,7 @@ export const bronzeSponsors: Sponsor[] = [
     description:
       "Nugenix Robotics works on robotic manipulation, ROS-based systems, and intelligent automation, with hands-on exposure to robotic arms and manipulation tasks.",
     logo: "/images/logos/nugenix.jpeg",
+    url: "https://nugenix.co.in/",
   },
   {
     name: "LABELLERR AI",
