@@ -125,6 +125,15 @@ export const technicalPartners: Sponsor[] = [
       "Student mechatronics and robotics society at TIET developing autonomous rovers, drones, and competitive robotics systems.",
     logo: "/images/logos/mars.jpg",
   },
+  {
+    name: "IHFC, IIT Delhi",
+    tier: "Technical Partner",
+    focus: "Technology Innovation Hub on Cobotics, IIT Delhi",
+    description:
+      "I-Hub Foundation for Cobotics (IHFC) is the Technology Innovation Hub of IIT Delhi established under the National Mission on Interdisciplinary Cyber-Physical Systems (NM-ICPS) by DST, Government of India, driving collaborative robotics, intelligent automation, and industry-academic innovation.",
+    logo: "/images/logos/ihfc.png",
+    url: "https://www.ihfc.co.in/",
+  },
 ];
 
 export const sponsors: Sponsor[] = [

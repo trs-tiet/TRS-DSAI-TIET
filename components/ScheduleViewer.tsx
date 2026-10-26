@@ -27,21 +27,21 @@ const scheduleData: Record<string, ScheduleItem> = {
   },
   day1: {
     id: "day1",
-    title: "Day 1 Schedule: Intelligent Systems & Industry 4.0",
+    title: "Day 1 Schedule: Intelligent Systems & Robotics in Industry",
     badge: "Day 1 · Friday, Oct 30",
     date: "October 30, 2026",
-    description: "Inaugural session, Intelligent Systems keynote & talks, Robotics in Industry 4.0, MathWorks hands-on workshop in LP-109, and TRS GBM.",
+    description: "Inaugural session, Intelligent Systems keynote & talks, Robotics in Industry, MathWorks hands-on workshop in LP-109, and TRS GBM.",
     venues: ["Auditorium", "LP-108", "LP-109"],
     imageSrc: "/images/schedule/day1_schedule.png",
     downloadPngName: "TRS-DSAI-2026-Day1-Schedule.png",
   },
   day2: {
     id: "day2",
-    title: "Day 2 Schedule: AI/ML & Healthcare Robotics",
+    title: "Day 2 Schedule: AI/ML in Robotics & Healthcare Robotics",
     badge: "Day 2 · Saturday, Oct 31",
     date: "October 31, 2026",
-    description: "AI/ML in Robotics, Healthcare & Rehabilitation Robotics, Noraxon & Labellerr AI hands-on workshops in LP-109, and Valedictory.",
-    venues: ["LP-108", "LP-109", "Poster Area"],
+    description: "AI/ML in Robotics, Healthcare Robotics, Noraxon & Labellerr AI hands-on workshops in LP-109, and Valedictory Session.",
+    venues: ["LP-108", "LP-109"],
     imageSrc: "/images/schedule/day2_schedule.png",
     downloadPngName: "TRS-DSAI-2026-Day2-Schedule.png",
   },
@@ -260,10 +260,10 @@ export default function ScheduleViewer() {
                   </span>
                 </div>
                 <h3 className="font-display font-bold text-[20px] text-navy">
-                  Intelligent Systems &amp; Industry 4.0
+                  Intelligent Systems &amp; Robotics in Industry
                 </h3>
                 <p className="text-[13px] text-steel mt-1 line-clamp-2">
-                  Inauguration, 4 technical lectures, MathWorks Hands-on Session (3–4 hrs in LP-109), and TRS General Body Meeting.
+                  Inauguration, 5 technical lectures, MathWorks Hands-on Session in LP-109, and TRS General Body Meeting.
                 </p>
 
                 {/* Venues & Timings */}
@@ -275,7 +275,7 @@ export default function ScheduleViewer() {
                     🛠️ LP-109 (HOS 1: MathWorks)
                   </span>
                   <span className="bg-paper px-2.5 py-1 rounded border border-steel/20 text-navy font-medium">
-                    ⏰ 09:00 – 18:00
+                    ⏰ 08:00 – 18:00
                   </span>
                 </div>
               </div>
@@ -343,10 +343,10 @@ export default function ScheduleViewer() {
                   </span>
                 </div>
                 <h3 className="font-display font-bold text-[20px] text-navy">
-                  AI/ML &amp; Healthcare Robotics
+                  AI/ML in Robotics &amp; Healthcare Robotics
                 </h3>
                 <p className="text-[13px] text-steel mt-1 line-clamp-2">
-                  4 technical sessions, Noraxon &amp; Labellerr AI industrial workshops in LP-109, and Valedictory.
+                  5 invited lectures including Mr. Aditya Marathe (Nugenix), Noraxon &amp; Labellerr AI industrial workshops in LP-109, and Valedictory.
                 </p>
 
                 {/* Venues & Timings */}

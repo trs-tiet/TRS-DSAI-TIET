@@ -159,6 +159,13 @@ export const speakers: Speaker[] = [
     photo: "/images/speakers/rohit-bhattacharjee.jpg",
     bio: "Customer Success Engineer with the Education Team at MathWorks, India. He is completing his PhD in Aerospace Engineering at IIT Madras, where his research focuses on flow analysis in gas turbine engines using advanced image-processing techniques. With over seven years of academic research experience, he has published several papers in reputed journals, including one that received the Distinguished Paper Award from the Proceedings of the Combustion Institute. He also holds a research-based Master's degree from the University of Ottawa and a Bachelor's degree in Aerospace Engineering from Carleton University, Canada.",
   },
+  {
+    name: "Mr. Aditya Marathe",
+    affiliation: "Nugenix Robotics",
+    type: "Industrial",
+    photo: "/images/speakers/aditya-marathe.jpg",
+    bio: "Speaker at the TRS-DSAI 2026 International Workshop representing Nugenix. Specializes in robotic manipulation, ROS-based autonomous platforms, and intelligent automation technologies with hands-on applications across industrial robotics and healthcare systems.",
+  },
 ];
 
 export const academicSpeakers: Speaker[] = speakers.filter((s) => s.type === "Academic");
